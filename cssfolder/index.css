@@ -15,7 +15,7 @@ html {
   
   #title{
     color: #df9861;
-    font-size: 77px;
+    font-size: 450%;
     font-family: 'DejaVu serif', Courier,monospace;
     font-weight:normal;
     position: absolute;
@@ -60,7 +60,8 @@ html {
   
   .login-form-field {
     margin-top: auto;
-    height: 25px;
+    height: 40%;
+    width: 100%;
     border: none;
     border-radius: 12px;
     outline: none;
