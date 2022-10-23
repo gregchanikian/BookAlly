@@ -46,14 +46,11 @@ html {
     
   }
   
-  
-  
   #login-form {
     align-self: center;
     display: grid;
     position:absolute;
-    top: 30%;
-     left: auto;
+    left: auto;
   }
 
   .login-form-field::placeholder {
@@ -62,22 +59,31 @@ html {
   }
   
   .login-form-field {
+    margin-top: auto;
     height: 25px;
     border: none;
-    border-bottom: 1px solid #3a3a3a;
     border-radius: 12px;
     outline: none;
     padding: 0px 0px 5px 5px;
   }
   
   #login-form-submit {
-    width: 100%;
+    width: 90%;
     padding: 11px;
     border: none;
     border-radius: 8px;
-    color: rgb(0, 0, 0);
+    color: #cbc5bc;
     font-weight: bold;
     background-color: #825e41;
     cursor: pointer;
     outline: none;
+    
+  }
+
+  input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+       -moz-appearance: checkbox;
+            appearance: checkbox;
+    display: inline-block;
+    width: fit-content;
   }

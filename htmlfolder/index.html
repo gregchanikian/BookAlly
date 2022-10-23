@@ -14,12 +14,22 @@
     <h1 id="title">BookAlly</h1>
     <h2 style="position: absolute; top:53%; left:54% ;  font-family: 'DejaVu serif', Courier,monospace; font-weight:normal; ">Your Pocket Library</h2>
   <main id="main-holder">
-   
-    
-    <form id="login-form" style="top: 17%;">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username" style="margin-top: 10px;">
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password" style="margin-top: 50px;">
-      <input type="submit" value="Login" id="login-form-submit" style="margin-top: 50px;">
+    <form id="login-form" style="top: 10%;">
+      <div>
+        <h4 style="margin: 2%; font-weight: lighter;"  >Username</h4>
+        <input type="text" name="username" id="username-field" class="login-form-field" style="margin-top: 10px; margin-bottom: 10px;">
+      </div>
+      <div>
+        <h4 style="margin: 2%; font-weight: lighter;">Password</h4>
+        <input type="Password" name="password" id="password-field" class="login-form-field" style="margin-top: 10px; margin-bottom: 10px;">
+      </div>
+      <input type="submit" value="Login" id="login-form-submit" style="margin-top: 30px;">
+      <div style="margin-top:4%;">
+        <input type="checkbox" value="lsRememberMe" id="rememberMe"> 
+        <label for="rememberMe" style="font-size: 20%; position: relative; vertical-align: middle;">Remember me</label>
+     </div>
+     <a href="" style=" font-size: 10px; ">Create Account</a>
+
     </form>
   
   </main>
