@@ -47,6 +47,8 @@ html {
   }
   
   #login-form {
+    height: 80%;
+    width: 80%;
     align-self: center;
     display: grid;
     position:absolute;
@@ -61,7 +63,7 @@ html {
   .login-form-field {
     margin-top: auto;
     height: 40%;
-    width: 100%;
+    width: 80%;
     border: none;
     border-radius: 12px;
     outline: none;
