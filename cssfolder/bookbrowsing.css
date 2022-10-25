@@ -20,4 +20,13 @@ html {
     top: 0%;
     right: 0%;
   }
+
+#book{
+  height: 57%;
+  width: auto;
+  position: absolute;
+  vertical-align: middle;
+  align-self: center;
+  
+}
   
