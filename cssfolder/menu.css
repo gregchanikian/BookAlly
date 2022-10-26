@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+  }
+ 
+#backgroundImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+#HeadTitle{
+    color: #4b1803;
+    font-size: 80px;
+    font-family: "Brush Script MT", cursive;;
+    font-weight:normal;
+    position: absolute;
+    left: 42%;
+    top: -2%;
+    object-fit: cover;
+}
+
+#menu-bar {
+    width: 18%;
+    height: 12%;
+    position: absolute;
+    left: 0.2%;
+    top:0.01%;
+    display: grid;
+    justify-items: center;
+    background-color: #825e41;
+    border-radius: 20px;
+}
+.btn {
+    border: 1px outset rgb(68, 31, 6);
+    background-color: #f5e9db;
+    height:78%;
+    width:37%;
+    cursor:pointer;
+    border-radius: 50%;
+    margin-top:-195%;   
+ }
+ .btn1{
+   margin-top: 2%;
+   margin-left: -11%;
+   margin-right:2%;
+ }
+ .btn2{
+   margin-top: 2%;
+   margin-right:4%;
+ }
+ .btn3{
+   margin-top: 2%;
+   margin-right:-30%;
+ }
+ .btn1 img {
+    border-radius: 50%;
+    display: inline-block;
+    height: 80%;  
+    width: 90%;
+ }
+
+.btn2 img {
+    border-radius: 50%;
+    display:inline-block;
+    height: 80%;  
+    width: 90%;
+ }
+ .btn3 img {
+    border-radius: 50%;
+    display: inline-block;
+    height: 80%;  
+    width: 90%;
+ }
+ 
+ .btn:hover {
+    background-color: rgb(214, 204, 199);
+    color:#81420e;
+ }
+ 
+ .btn:focus{
+    outline: 3px solid rgb(68, 31, 6);
+ }
+

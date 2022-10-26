@@ -12,6 +12,17 @@ html {
     background-repeat: repeat;
   }
 
+#HeadTitle{
+  color: #4b1803;
+  font-size: 80px;
+  font-family: "Brush Script MT", cursive;;
+  font-weight:normal;
+  position: absolute;
+  left: 42%;
+  top: -2%;
+  object-fit: cover;
+}
+
 #book1 {
   width: 9%;
   height: 24%;
@@ -85,17 +96,6 @@ body {
   justify-items: center;
   align-items: center;
   background-color: #3a3a3a;
-}
-
-#HeadTitle{
-  color: #4b1803;
-  font-size: 80px;
-  font-family: "Brush Script MT", cursive;;
-  font-weight:normal;
-  position: absolute;
-  left: 42%;
-  top: -2%;
-  object-fit: cover;
 }
 
 #line{
