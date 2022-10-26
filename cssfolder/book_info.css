@@ -51,7 +51,7 @@ body {
     
   }
 
-  #book_name {
+  #book_name { 
     color: #201f1f;
     font-size: 200%;
     font-family: 'Arial', Courier,monospace;
@@ -59,7 +59,7 @@ body {
     position: relative;
     align-self: center;
     top: 4%;
-  }
+  } 
 
   #Category {
     color: #2e2b2b;
@@ -127,7 +127,7 @@ body {
     height: 90%;
     width: 70%;
     
-    align-self: center;
+    align-self:baseline;
     display: grid;
     position:absolute;
     left: auto;
