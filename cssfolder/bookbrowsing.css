@@ -21,12 +21,63 @@ html {
     right: 0%;
   }
 
-#book{
-  height: 57%;
-  width: auto;
+#title{
+  width: 20%;
+
   position: absolute;
-  vertical-align: middle;
+  align-self: center;
+  top: 3%;
+
+  color: #4B1803;
+  font-size: 350%;
+  font-family: 'DejaVu serif', Courier,monospace;
+  font-weight:normal;
+  text-align: center;
+}
+
+#book{
+  height: 60%;
+  width: auto;
+  position: relative;
+  top: 5%;
   align-self: center;
   
+}
+
+#decline_button{
+  width: 70px;
+  height: 70px;
+  background: #F5E9DB;
+  color: #4B1803;
+  border-radius: 50%;
+  position: absolute;
+  vertical-align: middle;
+  left: 25%;
+  border: none;
+  text-align: center;
+  transform: rotate(-90deg);
+  font-size: 300% ;
+
+  border-style: solid;
+  border-color: #DDC1A7;
+}
+
+#accept_button{ 
+  width: 70px;
+  height: 70px;
+  background: #F5E9DB;
+  border-radius: 50%;
+  position: absolute;
+  vertical-align: middle;
+  color: #4B1803;
+  right: 25%;
+  border: none;
+  text-align: center;
+  transform: rotate(90deg);
+  font-size: 300% ;
+
+  border-style: solid;
+  border-color: #DDC1A7;
+
 }
   
