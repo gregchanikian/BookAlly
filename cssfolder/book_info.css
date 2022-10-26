@@ -28,7 +28,7 @@ body {
     font-weight:normal;
     position: absolute;
     left: 45%;
-    top: 10%;
+    top: 8%;
   }
 
   #book{
@@ -36,9 +36,43 @@ body {
     width: auto;
     position: absolute;
     margin-right: 60%;
-    margin-bottom: 3%;
 
   }
+
+  #main-holder {
+    width: 45%;
+    height: 55%;
+    position: absolute;
+    left: 40%;
+    display: grid;
+    justify-items: center;
+    background-color: #cbc5bc;
+    border-radius: 40px;
+    
+  }
+
+  #book_name {
+    color: #201f1f;
+    font-size: 200%;
+    font-family: 'Arial', Courier,monospace;
+    font-weight:normal;
+    position: relative;
+    align-self: center;
+    top: 4%;
+  }
+
+  #Category {
+    color: #2e2b2b;
+    font-size: 120%;
+    font-family: 'Arial', Courier,monospace;
+    font-weight:normal;
+    top: 50%;
+    
+
+  }
+
+
+
 
   *{
     margin: 0;
