@@ -22,9 +22,9 @@ body {
   }
 
   #title{
-    color: #3a3a3a;
-    font-size: 300%;
-    font-family: 'Arial', Courier,monospace;
+    color: #4b1803;
+    font-size: 400%;
+    font-family: "Brush Script MT", cursive;
     font-weight:normal;
     position: absolute;
     left: 45%;
@@ -60,7 +60,7 @@ body {
     left: 40%;
     display: grid;
     justify-items: center;
-    background-color: #cbc5bc;
+    background-color: #e7e1d8;
     border-radius: 20px;
     
   }
