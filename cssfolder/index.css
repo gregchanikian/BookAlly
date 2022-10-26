@@ -48,7 +48,7 @@ html {
   
   #login-form {
     top: 5%;
-    height: 100%;
+    height: 90%;
     width: 70%;
     
     align-self: center;
@@ -93,4 +93,22 @@ html {
             appearance: checkbox;
     display: inline-block;
     width: fit-content;
+  }
+
+  #create_account{
+    height: fit-content;
+    width: fit-content;
+
+    position: absolute; 
+    right: 0%; 
+    bottom: 1%; 
+    
+    border: none;
+    border-radius: 5px;
+
+    background-color: #825e41;
+    color: #cbc5bc;
+
+    font-size: medium;
+
   }
