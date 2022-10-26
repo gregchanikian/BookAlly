@@ -22,17 +22,14 @@ html {
   }
 
 #title{
-  width: 20%;
-
-  position: absolute;
-  align-self: center;
-  top: 3%;
-
-  color: #4B1803;
-  font-size: 350%;
-  font-family: 'DejaVu serif', Courier,monospace;
+  color: #4b1803;
+  font-size: 80px;
+  font-family: "Brush Script MT", cursive;;
   font-weight:normal;
-  text-align: center;
+  position: absolute;
+  left: 42%;
+  top: -2%;
+  object-fit: cover;
 }
 
 #book{
@@ -41,7 +38,8 @@ html {
   position: relative;
   top: 5%;
   align-self: center;
-  
+
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.374), 0 20px 37px 0 rgba(0, 0, 0, 0.379);  
 }
 
 #decline_button{
