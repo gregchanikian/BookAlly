@@ -113,35 +113,6 @@ body {
  object-fit: cover;
 }
 
-.btn {
-  border: 1px outset rgb(68, 31, 6);
-  background-color: #f5e9db;
-  height:60px;
-  width:60px;
-  cursor:pointer;
-  border-radius: 50%;
-  margin-top:-195%;
-  
-}
-.btn1{
- margin-right:34%;
-}
-.btn2{
- margin-left:15%;
-}
-.btn3{
- margin-right:-30%;
-}
-
-.btn:hover {
-  background-color: rgb(214, 204, 199);
-  color:#81420e;
-}
-
-.btn:focus{
-  outline: 3px solid rgb(68, 31, 6);
-}
-
 #div1{
   display: flex;
   justify-content: space-evenly;
@@ -157,13 +128,6 @@ body {
   margin: auto;
 }
 
-#div3{
- display: flex;
- justify-content: space-evenly;
- margin-top: 20%;
- position:absolute;
-}
-
 #a1{
   text-decoration: none;
   color: #4b1803;
@@ -172,26 +136,27 @@ body {
   padding: 10px 18px;
   border-radius: 40%;  
   font-size: 120%;
-  margin-left: -10%;
+  margin-inline-start: -1800%;
+  object-fit: cover;
 }
-
 #a1:hover{
   background: #81420e; 
 }
 #a1:focus{
   outline: 3px solid rgb(27, 15, 0);
 }
-#a2{
- text-decoration: none;
- color: #4b1803;
- margin-top: 4%;
- background: #f5e9db;
- padding: 8px 18px;
- border-radius: 40%;  
- font-size: 120%;
- margin-left: 1800%;
-}
 
+#a2{
+  text-decoration: none;
+  color: #4b1803;
+  margin-top: 4%;
+  background: #f5e9db;
+  padding: 8px 18px;
+  border-radius: 40%;  
+  font-size: 120%;
+  margin-inline-end: -1800%;
+  object-fit: cover;
+}
 #a2:hover{
  background: #81420e; 
 }
