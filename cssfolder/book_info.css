@@ -67,8 +67,8 @@ body {
     font-family: 'Arial', Courier,monospace;
     font-weight:normal;
     position: relative;
-    bottom: 70%;
-    right: 200%;
+    bottom: 58%;
+    right: 219%;
   }
 
   #author {
@@ -77,8 +77,8 @@ body {
     font-family: 'Arial', Courier,monospace;
     font-weight:normal;
     position: relative;
-    bottom: 90%;
-    right: 122%;
+    bottom: 120%;
+    right: 136%;
 
   }
 
@@ -88,11 +88,50 @@ body {
     font-family: 'Arial', Courier,monospace;
     font-weight:normal;
     position: relative;
-    bottom: 90%;
-    right: 122%;
+    bottom: 180%;
+    right: 147%;
 
   }
 
+  #page {
+    color: #2e2b2b;
+    font-size: 120%;
+    font-family: 'Arial', Courier,monospace;
+    font-weight:normal;
+    position: relative;
+    bottom:238%;
+    right: 327%;
+  }
+  #year{
+    color: #2e2b2b;
+    font-size: 120%;
+    font-family: 'Arial', Courier,monospace;
+    font-weight:normal;
+    position: relative;
+    bottom:295%;
+    right: 210%;
+  }
+
+  #info{
+    color: #2e2b2b;
+    font-size: 100%;
+    font-family: 'Arial', Courier,monospace;
+    font-weight:normal;
+    position: relative;
+    bottom:295%;
+    right: 210%;
+
+  }
+  #info-form {
+    top: 5%;
+    height: 90%;
+    width: 70%;
+    
+    align-self: center;
+    display: grid;
+    position:absolute;
+    left: auto;
+  }
 
 
 
