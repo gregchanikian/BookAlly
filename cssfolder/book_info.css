@@ -32,13 +32,26 @@ body {
   }
 
   #book{
+    top: 30%;
+    right: 70%;
     height: 45%;
     width: auto;
     position: absolute;
-    margin-right: 60%;
-  
 
   }
+
+  #info-form {
+    top: 5%;
+    height: 90%;
+    width: 70%;
+    
+    align-self:baseline;
+    display: grid;
+    position:absolute;
+    left: auto;
+  }
+
+
 
   #main-holder {
     width: 45%;
@@ -123,17 +136,6 @@ body {
     right: 210%;
 
   }
-  #info-form {
-    top: 5%;
-    height: 90%;
-    width: 70%;
-    
-    align-self:baseline;
-    display: grid;
-    position:absolute;
-    left: auto;
-  }
-
 
 
   *{
