@@ -47,7 +47,7 @@ body {
     display: grid;
     justify-items: center;
     background-color: #cbc5bc;
-    border-radius: 40px;
+    border-radius: 20px;
     
   }
 
@@ -66,8 +66,30 @@ body {
     font-size: 120%;
     font-family: 'Arial', Courier,monospace;
     font-weight:normal;
-    top: 50%;
-    
+    position: relative;
+    bottom: 70%;
+    right: 200%;
+  }
+
+  #author {
+    color: #2e2b2b;
+    font-size: 120%;
+    font-family: 'Arial', Courier,monospace;
+    font-weight:normal;
+    position: relative;
+    bottom: 90%;
+    right: 122%;
+
+  }
+
+  #publisher {
+    color: #2e2b2b;
+    font-size: 120%;
+    font-family: 'Arial', Courier,monospace;
+    font-weight:normal;
+    position: relative;
+    bottom: 90%;
+    right: 122%;
 
   }
 
