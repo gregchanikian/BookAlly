@@ -28,8 +28,16 @@
         <input type="checkbox" value="lsRememberMe" id="rememberMe "> 
         <label for="rememberMe" style="font-size: 95%; position: relative;margin-top: 0%;">Remember me</label>
      </div>
-     <button id="create_account">Create Account</button>
 
+     <button id="create_account" onclick="CreateAccount()">Create Account</button>
+
+     <script>
+      function CreateAccount() {
+        document.getElementById("main-holder").style.backgroundColor = "yellow";
+
+      }
+
+     </script>
     </form>
   
   </main>
