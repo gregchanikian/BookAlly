@@ -33,9 +33,9 @@ html {
   }
 
 
-  #main-holder {
+  #mainHolder {
     width: 25%;
-    height: 60%;
+    
     position: absolute;
     left: 10%;
     display: grid;
@@ -43,7 +43,35 @@ html {
     align-items: center;
     background-color: #cbc5bc;
     border-radius: 20px;
+
+    height: 60%;
+    overflow: hidden;
     
+    /*transition*/
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    transition: height 1s;
+
+    -webkit-transition: width 0.7s;
+    -moz-transition: width 0.7s;
+    transition:width 0.7s;
+
+    
+  }
+
+  #mainHolder.open{
+    height: 80%;
+    width: 45%;
+    left: 5%;
+    
+
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    transition:height 1s;
+
+    -webkit-transition: width 0.7s;
+    -moz-transition: width 0.7s;
+    transition:width 0.7s;
   }
   
   #login-form {
@@ -62,7 +90,7 @@ html {
     color: #000000;
   }
   
-  .login-form-field {
+  .loginformfield {
     height: 35%;
     width: 100%;
     position: relative;
@@ -70,7 +98,9 @@ html {
     border-radius: 12px;
     outline: none;
     padding: 0px 0px 5px 5px;
+
   }
+
   
   #login-form-submit {
     width: 100%;
@@ -86,6 +116,7 @@ html {
     outline: none;
     
   }
+
 
   input[type="checkbox"] {
     -webkit-appearance: checkbox;
