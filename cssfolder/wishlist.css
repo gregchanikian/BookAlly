@@ -127,7 +127,9 @@ body {
   margin-top: 50px;
   margin: auto;
 }
-
+#divi{
+  justify-content: space-evenly;
+}
 #a1{
   text-decoration: none;
   color: #4b1803;
@@ -166,38 +168,43 @@ body {
  outline: 3px solid rgb(27, 15, 0);
 }
 #menu-bar {
-  width: 14%;
-  height: 8%;
+  width: 16%;
+  height: 10%;
   position: absolute;
   left: 0.2%;
   top:0.01%;
   display: grid;
-  justify-items: center;
+  justify-items:center;
   background-color: #825e41;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
+  object-fit: cover;
 }
 .btn {
   border: 1px outset rgb(68, 31, 6);
   background-color: #f5e9db;
-  height:70%;
-  width:32%;
+  height:68%;
+  width:28%;
   cursor:pointer;
   border-radius: 50%;
+  position:absolute;
+  vertical-align: middle;
+  object-fit: cover;
 }
 .btn1{
-  margin-top: 4%;
-  margin-left: -8%;
-  margin-right:2%;
+  top: 8%;
+  left:2%;
 }
 .btn2{
-  margin-top: 4%;
-  margin-right:4%;
-  border: 4px outset rgb(68, 31, 6);/*analoga tin selida pou vriskomaste */
+  top: 8%;
+  left:36%;
+  background-color: #52300c;/*when library button is pressed*/
+  /*border: 4px outset rgb(68, 31, 6);/*analoga tin selida pou vriskomaste */
 }
+
 .btn3{
-  margin-top: 4%;
-  margin-right:-30%;
+  top: 8%;
+  right:2%;
 }
 .btn1 img {
   border-radius: 50%;
@@ -211,6 +218,7 @@ body {
   display:inline-block;
   height: 80%;  
   width: 90%;
+  filter: brightness(80%);/*when library button is pressed*/
 }
 .btn3 img {
   border-radius: 50%;
