@@ -12,12 +12,14 @@ button.onclick = function(){
         loginformsubmit = "";
         mainHolder.className = ""; 
         button.innerHTML = "Create Account";
+        location.href = 'wishlist.html';
 
       } else{
         mainHolder.className = "open";
+        
         button.innerHTML = "Login";
         loginformfield.className = "open";
-
+        
         loginformsubmit.style.display = "none";
         rememberMe.style.display = "none";
 
