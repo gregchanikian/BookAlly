@@ -1,8 +1,7 @@
  
 var mainHolder = document.getElementById("mainHolder");
 var button = document.getElementById("create_account");
-var loginformsubmit = document.getElementById("login-form-submit");
-var rememberMe = document.getElementById("rememberMe");
+var loginformsubmit = document.getElementById("loginformsubmit");
 var loginformfield = document.getElementById("loginformfield");
 
 button.onclick = function(){
@@ -16,15 +15,10 @@ button.onclick = function(){
 
       } else{
         mainHolder.className = "open";
-        
         button.innerHTML = "Login";
-        loginformfield.className = "open";
-        
+        button.style.fontSize = "140%";
+
         loginformsubmit.style.display = "none";
-        rememberMe.style.display = "none";
-
-
-        const preference = document.createElement("input");
         
       }
 }
