@@ -14,19 +14,34 @@
     <h2 style="position: absolute; top:53%; left:54% ;  font-family: 'DejaVu serif', Courier,monospace; font-weight:normal; font-size: xx-large; ">Your Pocket Library</h2>
   <main id="mainHolder">
     <form id="login-form">
+
       <div style="height: fit-content;">
         <h5 style=" font-size: larger; font-weight: lighter; margin-top: 5%; margin-bottom: 4%; height: fit-content;"  >Username</h5>
         <input type="text" name="username" id="username-field" class="loginformfield" >
       </div>
-      <div style="height: fit-content; ">
+
+      <div style="height: fit-content; margin-top: 15%; ">
         <h5 style=" font-size: larger; font-weight: lighter;margin-top: 5%; margin-bottom: 4%;height: fit-content;;">Password</h5>
         <input type="Password" name="password" id="password-field" class="loginformfield" >
       </div> 
-      <button formaction="wishlist.html" id="loginformsubmit" style="margin-top: 10%; margin-bottom: 30%;" >Login </button>
-      <a id="create_account">Create Account</a> 
+
+      <button formaction="wishlist.html" id="loginformsubmit" style="margin-top: 40%; " >Login </button>
+      <div id="checkbox">
+        <form style="height:100%;" >  
+          <p>Kind</p>
+          <br><br>  
+          <input type="radio" name="color" value="red"> Red   
+          <input type="radio" name="color" value="blue"> blue   
+          <input type="radio" name="color" value="green">green  
+          <input type="radio" name="color" value="pink">pink  
+           
+        </form>
+      </div>
+      <a id="create_account" >Create Account</a> 
       <script src="index.js"></script>
      
     </form>
+
   
   </main>
 </body>
