@@ -21,6 +21,7 @@ html {
   left: 42%;
   top: -2%;
   object-fit: cover;
+  cursor: default;
 }
 
 #book1 {
