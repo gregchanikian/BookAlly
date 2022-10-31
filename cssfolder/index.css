@@ -60,7 +60,7 @@ html {
   }
 
   #mainHolder.open{
-    height: 60%;
+    height: 80%;
     width: 45%;
     left: 5%;
     
@@ -124,8 +124,9 @@ html {
   #checkbox.open{
     font-size: larger;
     margin-top: 10%;
-    display: flex;
+    display: flow-root;
     height: 30%;
+    margin: 20px;
   }
 
 
@@ -145,7 +146,18 @@ html {
     color: #cbc5bc;
 
     font-size: 120%;
-
+    cursor: pointer;
   }
 
+  input[type="checkbox"] {
+    accent-color: #825e41;
+   
+    width: 25px;
+    height: 25px;
+    
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #825e41;
+  }
   
