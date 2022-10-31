@@ -124,8 +124,9 @@ html {
   #checkbox.open{
     font-size: larger;
     margin-top: 10%;
-    display: flow-root;
-    height: 30%;
+    display: grid;
+    height: fit-content;
+    width: fit-content;
     margin: 20px;
   }
 

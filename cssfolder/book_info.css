@@ -37,25 +37,12 @@ body {
     height: 45%;
     width: auto;
     position: absolute;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.374), 0 20px 37px 0 rgba(0, 0, 0, 0.379); 
 
   }
-
-  #info-form {
-    top: 5%;
-    height: 90%;
-    width: 70%;
-    
-    align-self:baseline;
-    display: grid;
-    position:absolute;
-    left: auto;
-  }
-
-
-
   #main-holder {
     width: 45%;
-    height: 55%;
+    height: fit-content;
     position: absolute;
     left: 40%;
     display: grid;
@@ -65,7 +52,23 @@ body {
     
   }
 
-  #book_name { 
+
+  #info-form {
+    top: 5%;
+    height: 90%;
+    width: 80%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    
+    display: grid;
+    left: auto;
+  }
+
+
+
+
+
+  /* #book_name { 
     color: #201f1f;
     font-size: 200%;
     font-family: 'Arial', Courier,monospace;
@@ -137,8 +140,8 @@ body {
 
   }
 
-
+*/
   *{
     margin: 0;
     padding: 0;
-}
+} 
