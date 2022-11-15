@@ -54,8 +54,7 @@ html {
  .btn2{
    top: 8%;
    left:36%;
-   /*background-color: #52300c;/*when library button is pressed*/
-   /*border: 4px outset rgb(68, 31, 6);/*analoga tin selida pou vriskomaste */
+   /*background-color: #52300c;/*when library button is pressed - analoga tin selida pou vriskomaste paei btn1-btn3*/
  }
  
  .btn3{
@@ -74,7 +73,7 @@ html {
    display:inline-block;
    height: 80%;  
    width: 90%;
-   /*filter: brightness(80%);/*when library button is pressed*/
+   /*filter: brightness(80%);/*when library button is pressed - analoga tin selida pou vriskomaste paei btn1-btn3*/
  }
  .btn3 img {
    border-radius: 50%;
