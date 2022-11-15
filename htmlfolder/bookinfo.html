@@ -7,6 +7,7 @@
   <title>BookInfo</title>
   <link rel="stylesheet" href="../cssfolder/book_info.css">
   <link rel="icon" href="../images/logo.png" type="image/png">
+  <link rel="stylesheet" href="../cssfolder/menu.css">
 </head>
 
 <body>
@@ -15,8 +16,22 @@
         <h1 id="title">BookAlly</h1>
         <img src="../images/book.jpg" id="book" >
 
-        <main id="main-holder">
+    
+        <div id="menu-bar">
+          <div id="divi">
+            <a href="bookbrowsing.html" id="abtn" data-toggle="tooltip" title="Book Recommendations">
+                <button class="btn btn-primary btn-square-md btn1"><img src="../images/plus-icon.png"></button>
+            </a>
+            <a href="wishlist.html" id="abtn" data-toggle="tooltip" title="Visit Your Library">
+                <button class="btn btn-primary btn-square-md btn2"><img src="../images/library-icon.png"></button>
+            </a>
+            <button class="btn btn-primary btn-square-md btn3"><img src="../images/search-icon.png"></button>
+        </div>
+      </div>
 
+
+
+        <main id="main-holder">
           <form id="info-form">
             
               <h2 style=" color: #531604; font-size: 180%; margin: auto; font-weight: bold;  margin-top: 2%; margin-bottom: 2%;  position:relative; width: fit-content;" >Secret Lives of Color</h2>
