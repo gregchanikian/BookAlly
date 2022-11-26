@@ -90,7 +90,7 @@ html {
   }
   
   .loginformfield {
-    height: 30px;
+    height: 35px;
     width: 100%;
     position: relative;
     border: none;
@@ -113,7 +113,7 @@ html {
     background-color: #825e41;
     cursor: pointer;
     outline: none;
-    bottom: 50%;
+    bottom: 10%;
     
   }
 
