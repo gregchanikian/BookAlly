@@ -10,18 +10,17 @@
 <body>
     
     <img  src="../images/background_login.png" id="backgroundloginimage">
-    <h1 id="title">BookAlly</h1>
-    <h2 style="position: absolute; top:53%; left:54% ;  font-family: 'DejaVu serif', Courier,monospace; font-weight:normal; font-size: xx-large; ">Your Pocket Library</h2>
+    
   <main id="mainHolder">
     <form id="login-form">
 
       <div >
-        <h5 style=" font-size: larger; font-weight: lighter; margin-top: 5%; margin-bottom: 4%; height: fit-content;"  >Username</h5>
+        <h5 style=" font-size: larger; font-weight: lighter; margin-top: 5%; margin-bottom: 4%; "  >Username</h5>
         <input type="text" name="username" id="username-field" class="loginformfield" >
       </div>
 
       <div style="margin-top: 15%; ">
-        <h5 style=" font-size: larger; font-weight: lighter;margin-top: 5%; margin-bottom: 4%;height: fit-content;;">Password</h5>
+        <h5 style=" font-size: larger; font-weight: lighter;margin-top: 5%; margin-bottom: 4%;">Password</h5>
         <input type="Password" name="password" id="password-field" class="loginformfield" >
       </div> 
       <br>
@@ -67,6 +66,7 @@
           </div> 
         </form>
       </div>
+
       <a id="create_account" >Create Account</a> 
       <script src="index.js"></script>
      

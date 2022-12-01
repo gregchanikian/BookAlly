@@ -12,16 +12,6 @@ html {
     align-items: center;
     background-color: #3a3a3a;
   }
-  
-  #title{
-    color: #df9861;
-    font-size: 590%;
-    font-family: 'DejaVu serif', Courier,monospace;
-    font-weight:normal;
-    position: absolute;
-    left: 51%;
-    top: 28%;
-  }
 
 
   #backgroundloginimage {
@@ -90,7 +80,7 @@ html {
   }
   
   .loginformfield {
-    height: 35px;
+    height: 50%;
     width: 100%;
     position: relative;
     border: none;
@@ -113,7 +103,6 @@ html {
     background-color: #825e41;
     cursor: pointer;
     outline: none;
-    bottom: 10%;
     
   }
 
