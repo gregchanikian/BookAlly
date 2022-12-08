@@ -5,6 +5,7 @@ var loginformsubmit = document.getElementById("loginformsubmit");
 var loginformfield = document.getElementById("loginformfield");
 var checkbox = document.getElementById("checkbox")
 var checkbox_title = document.getElementById("checkbox_title")
+var form_title = document.getElementById("title")
 
 button.onclick = function(){
 
@@ -25,6 +26,7 @@ button.onclick = function(){
         button.style.fontSize = "140%";
 
         loginformsubmit.style.display = "none";
+        form_title.innerHTML = "Create Account"
         
       }
 }

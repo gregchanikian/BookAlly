@@ -12,58 +12,84 @@
     <img  src="../images/background_login.png" id="backgroundloginimage">
     
   <main id="mainHolder">
+    
     <form id="login-form">
-
+      <h2 id="title"  style="text-align: center; color:#825e41 ; font-size: x-large;" >Login Form</h2>
+      <hr>
       <div >
-        <h5 style=" font-size: larger; font-weight: lighter; margin-top: 5%; margin-bottom: 4%; "  >Username</h5>
+        <h5 style=" font-size: x-large; font-weight: lighter; margin-top: 5%; margin-bottom: 4%; "  >Username</h5>
         <input type="text" name="username" id="username-field" class="loginformfield" >
       </div>
 
-      <div style="margin-top: 15%; ">
-        <h5 style=" font-size: larger; font-weight: lighter;margin-top: 5%; margin-bottom: 4%;">Password</h5>
+      <div style="margin-top: 10%; margin-bottom: 10%; ">
+        <h5 style=" font-size: x-large; font-weight: lighter;margin-top: 5%; margin-bottom: 4%;">Password</h5>
         <input type="Password" name="password" id="password-field" class="loginformfield" >
       </div> 
-      <br>
-      <br>
+      
       <button formaction="wishlist.html" id="loginformsubmit">Login </button>
 
       <div id="checkbox_title">
-        <p >Book Categories</p>
-        <hr style="width: 100%;height: 2px;" >
+        <p style="margin: 0%;">Book Categories</p>
+        <hr style="width: 100%;height: 2px; margin-bottom: 5%;" >
       </div>
       
       <div id="checkbox">
         
         
         <form >  
-          <div id="column_1">
+          <div style=" float:left;  margin-right: 5%;">
           <input type="checkbox" name="category" value="1 " >
-          <label for="βιογραφίες-αυτοβιογραφίες ">βιογραφίες-αυτοβιογραφίες </label>
+          <label for="βιογραφίες-αυτοβιογραφίες "> βιογραφίες-αυτοβιογραφίες <br>
+
+          </label><br>
           <input type="checkbox" name="category" value="2"> 
-          <label for=" τέχνη">τέχνη </label>
+          <label for=" τέχνη"> τέχνη <br>
+
+          </label><br>
           <input type="checkbox" name="category" value="3">
-          <label for=" Αστυνομικά-Θρίλερ ">Αστυνομικά-Θρίλερ  </label>
+          <label for=" Αστυνομικά-Θρίλερ "> Αστυνομικά-Θρίλερ <br>
+             </label><br>
           <input type="checkbox" name="category" value="4">
-          <label for=" Αυτοβελτίωση-Ψυχολογία"> Αυτοβελτίωση-Ψυχολογία</label>
+          <label for=" Αυτοβελτίωση-Ψυχολογία"> Αυτοβελτίωση-Ψυχολογία <br>
+
+          </label><br>
           <input type="checkbox" name="category" value="5" > 
-          <label for=" Ιστορία">Ιστορία </label>
+          <label for=" Ιστορία"> Ιστορία <br>
+            
+          </label><br>
           <input type="checkbox" name="category" value="6" >
-          <label for="Ρομαντικά ">Ρομαντικά </label>
+          <label for="Ρομαντικά "> Ρομαντικά <br>
+          </label><br>
           </div>
-          <div id="column_2">
+
+
+          <div style=" float:left; margin-left: 5%;">
+          
           <input type="checkbox" name="category" value="7" >
-          <label for="  Οικονομικά ">Οικονομικά </label>
+          <label for="  Οικονομικά "> Οικονομικά <br>
+
+          </label><br>
           <input type="checkbox" name="category" value="8" > 
-          <label for=" Φιλοσοφία ">Φιλοσοφία  </label>
+          <label for=" Φιλοσοφία "> Φιλοσοφία  <br>
+
+          </label><br>
           <input type="checkbox" name="category" value="9" > 
-          <label for="Ποίηση "> Ποίηση</label>
+          <label for="Ποίηση "> Ποίηση<br>
+
+          </label><br>
           <input type="checkbox" name="category" value="10" > 
-          <label for="Περιπέτεια ">Περιπέτεια </label>
+          <label for="Περιπέτεια "> Περιπέτεια <br>
+
+          </label><br>
           <input type="checkbox" name="category" value="11" > 
-          <label for="  Μαγειρική"> Μαγειρική</label>
+          <label for="  Μαγειρική"> Μαγειρική<br>
+
+          </label><br>
           <input type="checkbox" name="category" value="12" > 
-          <label for="Επιστημονικής Φαντασίας">Επιστημονικής Φαντασίας </label>
-          </div> 
+          <label for="Επιστημονικής Φαντασίας"> Επιστημονικής Φαντασίας <br>
+
+          </label><br>
+          </div>
         </form>
       </div>
 

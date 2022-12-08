@@ -11,6 +11,7 @@ html {
     justify-items: center;
     align-items: center;
     background-color: #3a3a3a;
+    
   }
 
 
@@ -50,8 +51,8 @@ html {
   }
 
   #mainHolder.open{
-    height: 90%;
-    width: 45%;
+    height: 75%;
+    width: 35%;
     left: 5%;
     
 
@@ -80,20 +81,20 @@ html {
   }
   
   .loginformfield {
-    height: 50%;
+    height: 50px;
     width: 100%;
     position: relative;
     border: none;
     border-radius: 12px;
     outline: none;
     padding: 0px 0px 5px 5px;
-    font-size: larger;
+    font-size: xx-large;
   }
 
   
   #loginformsubmit {
     width: 100%;
-    height: 15%;
+    height: 12%;
     padding: 11px;
     border: none;
     border-radius: 8px;
@@ -103,7 +104,7 @@ html {
     background-color: #825e41;
     cursor: pointer;
     outline: none;
-    
+    margin-top: 20%;
   }
 
   #checkbox_title{
@@ -114,7 +115,8 @@ html {
   #checkbox_title.open{
     display: grid;
     height: fit-content;
-    
+    font-size: x-large;
+    margin: 0%;
   }
 
   #checkbox{
@@ -123,23 +125,12 @@ html {
   }
 
   #checkbox.open{
-    display: block;
-    font-size: small;
-    width: 150%;
    
+    width: 100%;
+    font-size: larger;
+    display: initial;
   }
 
-  #column_1{
-    display: grid;
-  }
-  
-  #column_2{
-    display: grid;
-    position: absolute;
-    left: 60%;
-    top: 58%;
-    
-  }
 
 
   #create_account{
@@ -163,15 +154,17 @@ html {
 
   input[type="checkbox"] {
     accent-color: #825e41;
-    width: fit-content;
-    height: min-content;
-    display: flex;
+    width: 20px;
+    height: 20px;
+    margin: 0%;
+    border-radius: 50%;
   }
   
   input[type="checkbox"]:checked {
     background-color: #825e41;
-    width: fit-content;
-    height: min-content;
-    display:flex;
+    width: 20px;
+    height: 20px;
+    margin: 0%;
+    border-radius: 50%;
   }
   
