@@ -1,29 +1,3 @@
-<!--<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="t8200067@aueb.gr">
-        <link rel="icon" href="../images/logo.png" type="image/png">
-        <title>Menu</title>
-        <link rel="stylesheet" href="../cssfolder/menu.css">
-    </head>
-    <body>
-        <img  src="../images/BackgroundImage.png" id="backgroundImage">
-        <h1 id="HeadTitle">BookAlly</h1>
-        <main id="menu-bar">
-            <div id="divi">
-                <a href="bookbrowsing.html" id="abtn" data-toggle="tooltip" title="Book Recommendations">
-                    <button class="btn btn-primary btn-square-md btn1"><img src="../images/plus-icon.png"></button>
-                </a>
-                <a href="wishlist.html" id="abtn" data-toggle="tooltip" title="Visit Your Library">
-                    <button class="btn btn-primary btn-square-md btn2"><img src="../images/library-icon.png"></button>
-                </a>
-                <button class="btn btn-primary btn-square-md btn3"><img src="../images/search-icon.png"></button>
-            </div>
-        </main>
-    </body>
-</html>--> 
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <style>
      #menu_page {
@@ -71,7 +45,7 @@
     left: 2%;
     top: 3%;
 
-    width: 7%;
+    width: 10%;
     height: 5%;
 
     align-items: center;
@@ -84,10 +58,10 @@
         
 </main>
 <a id="menu_button">
-    <div style=" float:left;  margin-right: 10%; margin-left: 15%; margin-top: 5% ;">
-        <img src="../images/menu_icon.png" alt="">
+    <div style=" float:left;  margin-right: 10%; margin-left: 10%; margin-top: 5% ;">
+        <img src="../images/menu_icon2.png" alt="">
+        <p style="font-size: x-large;  float:right; margin-left: 42%; margin-top: -30%;">Menu</p>
     </div>
-    <p style="font-size: x-large;  float:left;  margin-top: 10%;">Menu</p>
 </a>
 
 
@@ -117,4 +91,6 @@ button.onclick = function(){
       }
 }
 
+
 </script>
+
