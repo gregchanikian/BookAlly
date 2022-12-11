@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>BookAlly-Login</title>
   <link rel="stylesheet" href="../cssfolder/index.css">
+  <link rel="icon" href="../images/logo.png" type="image/png">
 </head>
 
 <body>
@@ -18,15 +19,20 @@
       <hr>
       <div >
         <h5 style=" font-size: x-large; font-weight: lighter; margin-top: 5%; margin-bottom: 4%; "  >Username</h5>
-        <input type="text" name="username" id="username-field" class="loginformfield" >
+        <input type="text" name="username" id="username-field" class="loginformfield" placeholder="Enter your username" style="font-size: medium;">
       </div>
 
       <div style="margin-top: 10%; margin-bottom: 10%; ">
         <h5 style=" font-size: x-large; font-weight: lighter;margin-top: 5%; margin-bottom: 4%;">Password</h5>
-        <input type="Password" name="password" id="password-field" class="loginformfield" >
+        <input type="Password" name="password" id="password-field" class="loginformfield" placeholder="Enter your password" style="font-size: medium;" >
       </div> 
       
-      <button formaction="wishlist.html" id="loginformsubmit">Login </button>
+      <button formaction="wishlist.jsp" id="loginformsubmit">Login </button>
+
+      <div style="margin-top: 10%; margin-bottom: 10%; ">
+        <h5 style=" font-size: x-large; font-weight: lighter;margin-top: 5%; margin-bottom: 4%;">Confirm Password</h5>
+        <input type="Password" name="cpassword" id="cpassword-field" class="loginformfield" placeholder="Confirm your password" style="font-size: medium;"  >
+      </div> 
 
       <div id="checkbox_title">
         <p style="margin: 0%;">Book Categories</p>
@@ -34,7 +40,7 @@
       </div>
       
       <div id="checkbox">
-        
+
         
         <form >  
           <div style=" float:left;  margin-right: 5%;">
