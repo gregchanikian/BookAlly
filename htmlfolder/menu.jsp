@@ -16,13 +16,13 @@
     overflow: hidden;
     
     /*transition*/
-    -webkit-transition: height 1s;
-    -moz-transition: height 1s;
-    transition: height 1s;
+    -webkit-transition: height 0.8s;
+    -moz-transition: height 0.8s;
+    transition:height 0.8s;
 
-    -webkit-transition: width 0.7s;
-    -moz-transition: width 0.7s;
-    transition:width 0.7s;
+    -webkit-transition: width 1.2s;
+    -moz-transition: width 1.2s;
+    transition:width 1.2s;
      }
 
     #menu_page.open{
@@ -50,11 +50,28 @@
 
     align-items: center;
   }
+
+  #menu_catalog{
+    display: none;
+  }
+
+  #menu_catalog.open{
+    display: unset;
+  }
+
 </style>
 
 
 <main id="menu_page">
-    
+
+  <div id="menu_catalog"> 
+    <a href="bookbrowsing.jsp">hjfgdfg</a>
+    <br>
+    <a href="bookbrowsing.jsp">hjfgdfg</a>
+    <br>
+    <a href="bookbrowsing.jsp">hjfgdfg</a>
+
+  </div>
         
 </main>
 <a id="menu_button">
@@ -62,6 +79,8 @@
         <img src="../images/menu_icon2.png" alt="">
         <p style="font-size: x-large;  float:right; margin-left: 42%; margin-top: -30%;">Menu</p>
     </div>
+
+    
 </a>
 
 
@@ -70,9 +89,8 @@
 <script>
 var menu_page = document.getElementById("menu_page");
 var button = document.getElementById("menu_button");
-var link1 = document.getElementById("link1");
-var link2 = document.getElementById("link2");
-var link3 = document.getElementById("link3")
+var Menu = document.getElementById("menu_catalog");
+
 
 
 
@@ -82,11 +100,13 @@ button.onclick = function(){
       if(menu_page.className == "open"){
         
         menu_page.className = "";
+        Menu.className = "";
        
 
       } else{
         
         menu_page.className = "open";
+        Menu.className = "open";
         
       }
 }

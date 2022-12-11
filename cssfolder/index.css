@@ -51,7 +51,7 @@ html {
   }
 
   #mainHolder.open{
-    height: 75%;
+    height: 80%;
     width: 35%;
     left: 5%;
     
@@ -87,10 +87,18 @@ html {
     border: none;
     border-radius: 12px;
     outline: none;
-    padding: 0px 0px 5px 5px;
+    padding: 0px 0px 3px 3px;
     font-size: xx-large;
   }
 
+  #cpassword-field {
+    display: none;
+  }
+
+  #cpassword-field.open {
+    display: unset;
+  }
+  
   
   #loginformsubmit {
     width: 100%;
@@ -109,7 +117,6 @@ html {
 
   #checkbox_title{
     display: none;
-    
   }
 
   #checkbox_title.open{
