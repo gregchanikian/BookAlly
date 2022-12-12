@@ -81,5 +81,13 @@ public class Book {
     }
 
 
+    public void setPages(String pages) {
+            this.pages = pages;
+        }
+
+    public String getPages() {
+          return pages;
+    }
+
 
 }
