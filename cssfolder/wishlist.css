@@ -168,19 +168,7 @@ body {
 #a2:focus{
  outline: 3px solid rgb(27, 15, 0);
 }
-#menu-bar {
-  width: 16%;
-  height: 10%;
-  position: absolute;
-  left: 0.2%;
-  top:0.01%;
-  display: grid;
-  justify-items:center;
-  background-color: #825e41;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  object-fit: cover;
-}
+
 .btn {
   border: 1px outset rgb(68, 31, 6);
   background-color: #f5e9db;
@@ -242,4 +230,15 @@ body {
 #abtn:visited {
   background-color: transparent;
   text-decoration: none;
+}
+
+#alert-form {
+  top: 5%;
+  height: 10%;
+  width: 70%;
+  padding-top: 3%;
+  padding-bottom: 10%;
+  background-color: #e7e1d8;
+  display: grid;
+  left: auto;
 }

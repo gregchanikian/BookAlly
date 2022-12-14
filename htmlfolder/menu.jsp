@@ -26,7 +26,7 @@
      }
 
     #menu_page.open{
-    height: 70%;
+    height: 58%;
     width: 13%;
     
     
@@ -59,31 +59,91 @@
     display: unset;
   }
 
+a { 
+    color: black; 
+    text-decoration:none;
+    font-size: medium;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#menu-link:link {
+  color: red;
+}
+
+
+#menu-link:visited {
+  color: 81420e;
+}
+
+
+#menu-link:hover {
+  color: rgb(27, 15, 0);
+}
+
+#menu-link:active {
+  color: 81420e;
+}
+
+#option1{
+    position: absolute;
+    left: 2%;
+    top: 15%;
+}
+
+#option2{
+    position: absolute;
+    left: 2%;
+    top: 30%;
+}
+
+#option3{
+    position: absolute;
+    left: 2%;
+    top: 45%;
+}
+#logout-div{
+    position: absolute;
+    top: 80%;
+    left: 38%
+}
 </style>
 
 
 <main id="menu_page">
 
+       
   <div id="menu_catalog"> 
-    <a href="bookbrowsing.jsp">hjfgdfg</a>
+    <div id="option1">
+        <a id="menu-link" href="search.jsp">Search</a>
+    </div>
     <br>
-    <a href="bookbrowsing.jsp">hjfgdfg</a>
+    <div id="option2">
+        <a id="menu-link" href="bookbrowsing.jsp">Explore new books</a>
+    </div>
     <br>
-    <a href="bookbrowsing.jsp">hjfgdfg</a>
+    <div id="option3">   
+        <a id="menu-link" href="wishlist.jsp">Visit your wishlist</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="logout-div" >
+        <img src="../images/logout-icon.png" alt="">
+        <a id="menu-link" href="logout.jsp">Logout</a>
+    </div>
 
   </div>
-        
+   
 </main>
 <a id="menu_button">
     <div style=" float:left;  margin-right: 10%; margin-left: 10%; margin-top: 5% ;">
         <img src="../images/menu_icon2.png" alt="">
-        <p style="font-size: x-large;  float:right; margin-left: 42%; margin-top: -30%;">Menu</p>
-    </div>
-
-    
+        <p style="font-size: x-large;  float:right; margin-left: 42%; margin-top: -36%;">  Menu</p>
+    </div>   
 </a>
-
-
 
 
 <script>
