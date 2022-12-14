@@ -1,30 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page errorPage="error_ex3_8200067.jsp"%>
 
-<%
-session.invalidate();
-%>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
 	<%@ include file="header.jsp" %>
 	
-	<meta http-equiv="refresh" content="4;url=login.jsp" />
+	<meta http-equiv="refresh" content="10;url=login.jsp" />
 		
-	<meta name="description" content=" log out page">
+	<meta name="description" content="log out page">
 	<meta name="author" content="t8200067@aueb.gr">
 	
-	<title>Logout</title>
-    <link rel="stylesheet" href="../cssfolder/wishlist.css">
+	<title>logout</title>
+
 	
-	
-</head>
+	</head>
 <body>	
-    <img  src="../images/BackgroundImage.png" id="backgroundImage">
-    <h1 id="HeadTitle">BookAlly</h1>
-    <form id="alert-form"> 
-        <h2>Πραγματοποιήθηκε έξοδος από τον λογαριασμό σας!</h2>
-    </form>
+
+	<div class="container theme-showcase" role="main">
+
+		<div class="alert alert-success text-center" role="alert">Η έξοδος πραγματοποιηθηκε με επιτυχία</div>		
+
+	</div>
+	
+	
 </body>
 </html>
