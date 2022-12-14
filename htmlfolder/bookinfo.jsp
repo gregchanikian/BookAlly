@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="bookally.*" %>
-<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -22,6 +22,7 @@
 <%@ include file="menu.jsp" %>
 
 <%  BookService bService = new BookService();
+    int id = request.getParameter(id);
 
     Book asked_book = (Book)bService.findBook(Integer.parseInt(id));
 %>
