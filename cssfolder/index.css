@@ -67,11 +67,19 @@ html {
   
   #login-form {
     top: 5%;
-    height: 90%;
+    
     width: 70%;
     
     align-self: center;
-    position:absolute;
+    position:relative;
+    left: auto;
+  }
+
+  #createaccount_form{
+    width: 70%;
+    
+    align-self: center;
+    position:relative;
     left: auto;
   }
 

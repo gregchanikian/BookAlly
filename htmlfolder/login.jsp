@@ -14,7 +14,7 @@
     
   <main id="mainHolder">
     
-    <form id="login-form">
+    <form id="login-form" method="post" action="loginController.jsp">
       <h2 id="title"  style="text-align: center; color:#825e41 ; font-size: x-large;" >Login Form</h2>
       <hr>
       <div >
@@ -28,6 +28,12 @@
       </div> 
       
       <button formaction="wishlist.jsp" id="loginformsubmit">Login </button>
+
+      </form>
+
+      
+      <form id="createAccount_form" method="post" action="loginController.jsp">
+
 
       <div id="cpassword-field">
         <h5 style=" font-size: x-large; font-weight: lighter; margin-top: 5%; margin-bottom: 5%; ">Confirm Password</h5>
