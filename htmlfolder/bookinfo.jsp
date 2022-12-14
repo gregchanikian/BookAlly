@@ -22,7 +22,7 @@
 <%@ include file="menu.jsp" %>
 
 <%  BookService bService = new BookService();
-    int id = request.getParameter(id);
+    String id = request.getParameter("id");
 
     Book asked_book = (Book)bService.findBook(Integer.parseInt(id));
 %>
@@ -41,7 +41,7 @@
                     <h5 style=" font-size: larger; font-weight: lighter;margin-top: 1%; margin-bottom: 1%;height: fit-content;">Εκδότης: + <%= asked_book.getEdition() %> </h5>
                   </div>
                   <div> 
-                    <h6 style=" font-size: larger; font-weight: lighter;margin-top: 1%; margin-bottom: 1%;height: fit-content;"> Σελίδες: + <%= asked_book.getPges() %> </h6>
+                    <h6 style=" font-size: larger; font-weight: lighter;margin-top: 1%; margin-bottom: 1%;height: fit-content;"> Σελίδες: + <%= asked_book.getPages() %> </h6>
                   </div>
                   <div> 
                     <h7  style=" font-size: larger; font-weight: lighter;margin-top: 1%; margin-bottom: 1%; height: fit-content;"> Χρονολογία:  + <%= asked_book.getYear() %>  </h7>
