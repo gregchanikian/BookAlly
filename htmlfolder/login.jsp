@@ -13,7 +13,6 @@
     <img  src="../images/background_login.png" id="backgroundloginimage">
     
   <main id="mainHolder">
-    
     <form id="login-form" method="post" action="loginController.jsp">
       <h2 id="title"  style="text-align: center; color:#825e41 ; font-size: x-large;" >Login Form</h2>
       <hr>
@@ -24,15 +23,12 @@
 
       <div style="margin-top: 5%; margin-bottom: 5%;">
         <h5 style=" font-size: x-large; font-weight: lighter; margin-top: 5%; margin-bottom: 5%;  ">Password</h5>
-        <input type="Password" name="password" id="password-field" class="loginformfield" placeholder="Enter your password" style="font-size: medium;" >
+        <input type="Password" name="password" id="password-field" class="loginformfield" placeholder="Enter your password" style="font-size: medium;" > 
       </div> 
       
-      <button formaction="wishlist.jsp" id="loginformsubmit">Login </button>
-
-      </form>
+      <button  id="loginformsubmit">Login </button>
 
       
-      <form id="createAccount_form" method="post" action="loginController.jsp">
 
 
       <div id="cpassword-field">
@@ -105,6 +101,7 @@
         </form>
       </div>
 
+     
       <a id="create_account" >Create Account</a> 
       <script src="index.js"></script>
      

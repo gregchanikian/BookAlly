@@ -66,22 +66,14 @@ html {
   }
   
   #login-form {
-    top: 5%;
     
     width: 70%;
-    
+    height: 90%;
     align-self: center;
     position:relative;
     left: auto;
   }
 
-  #createaccount_form{
-    width: 70%;
-    
-    align-self: center;
-    position:relative;
-    left: auto;
-  }
 
   .login-form-field::placeholder {
    

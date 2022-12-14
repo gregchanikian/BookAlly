@@ -26,7 +26,7 @@ public class UserDAO {
 
 		            while (rs.next()) {
 
-		                users.add(new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getBoolean("BIOGRAPHY"),rs.getBoolean("ART"),rs.getBoolean("THRILLER"),rs.getBoolean("PSYCHOLOGY"),rs.getBoolean("HISTORY"), rs.getBoolean("ROMANCE"),rs.getBoolean("ECONOMY"),rs.getBoolean("PHYLOSOPHY"),rs.getBoolean("POETRY"),rs.getBoolean("ADVENTURE"),rs.getBoolean("COOKING"),rs.getBoolean("SCI_FI")));
+		                users.add(new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getBoolean("BIOGRAPHY"),rs.getBoolean("ART"),rs.getBoolean("THRILLER"),rs.getBoolean("PSYCHOLOGY"),rs.getBoolean("HISTORY"), rs.getBoolean("ROMANCE"),rs.getBoolean("ECONOMY"),rs.getBoolean("PHILOSOPHY"),rs.getBoolean("POETRY"),rs.getBoolean("ADVENTURE"),rs.getBoolean("COOKING"),rs.getBoolean("SCI_FI")));
 
 		            }
 
@@ -75,7 +75,7 @@ public class UserDAO {
 				throw new Exception("Wrong username or password");
 			}
 
-			User user = new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getBoolean("BIOGRAPHY"),rs.getBoolean("ART"),rs.getBoolean("THRILLER"),rs.getBoolean("PSYCHOLOGY"),rs.getBoolean("HISTORY"), rs.getBoolean("ROMANCE"),rs.getBoolean("ECONOMY"),rs.getBoolean("PHYLOSOPHY"),rs.getBoolean("POETRY"),rs.getBoolean("ADVENTURE"),rs.getBoolean("COOKING"),rs.getBoolean("SCI_FI"));
+			User user = new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getBoolean("BIOGRAPHY"),rs.getBoolean("ART"),rs.getBoolean("THRILLER"),rs.getBoolean("PSYCHOLOGY"),rs.getBoolean("HISTORY"), rs.getBoolean("ROMANCE"),rs.getBoolean("ECONOMY"),rs.getBoolean("PHILOSOPHY"),rs.getBoolean("POETRY"),rs.getBoolean("ADVENTURE"),rs.getBoolean("COOKING"),rs.getBoolean("SCI_FI"));
 			rs.close();
 			stmt.close();
 			db.close();
@@ -103,7 +103,7 @@ public class UserDAO {
 
 
 		String sql = "INSERT INTO user"
-            + " (USERNAME, PASSWORD, POINTER, BIOGRAPHY, ART, THRILLER, PSYCHOLOGY, HISTORY, ROMANCE, ECONOMY, PHYLOSOPHY, POETRY, ADVENTURE, COOKING, SCI_FI ) VALUES (?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            + " (USERNAME, PASSWORD, POINTER, BIOGRAPHY, ART, THRILLER, PSYCHOLOGY, HISTORY, ROMANCE, ECONOMY, PHILOSOPHY, POETRY, ADVENTURE, COOKING, SCI_FI ) VALUES (?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
 		String sql1 = "SELECT * FROM user WHERE username = '"+user.getUsername()+"'";
         Connection con = null;
