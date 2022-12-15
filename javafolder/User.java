@@ -4,24 +4,24 @@ public class User {
 
 	private String username;
 	private String password;
-	private int userId;
-	private boolean biography;
-	private boolean art;
-	private boolean thriller;
-	private boolean psychology;
-	private boolean history;
-	private boolean romance;
-	private boolean economy;
-	private boolean philosophy;
-	private boolean poetry;
-	private boolean adventure;
-	private boolean cooking;
-	private boolean scifi;
+	private int pointer;
+	private String biography;
+	private String art;
+	private String thriller;
+	private String psychology;
+	private String history;
+	private String romance;
+	private String economy;
+	private String philosophy;
+	private String poetry;
+	private String adventure;
+	private String cooking;
+	private String scifi;
 	
-    public User( String username, String password, int userId, boolean biography,boolean art, boolean thriller, boolean psychology,boolean history,boolean romance,boolean economy,boolean philosophy,boolean poetry,boolean adventure,boolean cooking,boolean scifi) {
+    public User( String username, String password, int pointer, String biography,String art, String thriller,String psychology,String history,String romance,String economy,String philosophy,String poetry,String adventure,String cooking,String scifi) {
         this.username = username;
         this.password = password;
-        this.userId = userId;
+        this.pointer = pointer;
         this.biography = biography;
         this.art = art;
         this.thriller = thriller;
@@ -54,12 +54,12 @@ public class User {
     }
     
     
-    public void setUserId(){
-    	this.userId = userId;
+    public void setpointer(){
+    	this.pointer = pointer;
     }
     
-    public int getUserId(){
-            return userId;
+    public int getpointer(){
+            return pointer;
     }
     
     
@@ -67,7 +67,7 @@ public class User {
         this.biography = biography;
     }
     
-    public boolean getBiography(){
+    public String getBiography(){
          return biography;
     }
     
@@ -75,7 +75,7 @@ public class User {
          this.art = art;
     }
     
-    public boolean getArt(){
+    public String getArt(){
     	return art;
     }
     
@@ -83,7 +83,7 @@ public class User {
     	this.thriller = thriller;
     }
     
-    public boolean getThriller(){
+    public String getThriller(){
     	return thriller;
     }
     
@@ -91,7 +91,7 @@ public class User {
     	this.psychology = psychology;
     }
     
-    public boolean getPsychology(){
+    public String getPsychology(){
     	return psychology;
     }
     
@@ -100,7 +100,7 @@ public class User {
     	this.history = history;
     }
     
-    public boolean getHistory(){
+    public String getHistory(){
     	return history;
     }
     
@@ -109,7 +109,7 @@ public class User {
     	this.romance = romance;
     }
     
-    public boolean getRomance(){
+    public String getRomance(){
     	return romance;
     }
     
@@ -118,7 +118,7 @@ public class User {
     	this.economy = economy;
     }
     
-    public boolean getEconomy(){
+    public String getEconomy(){
     	return economy;
     }
     
@@ -126,7 +126,7 @@ public class User {
     	this.philosophy = philosophy;
     }
     
-    public boolean getPhilosophy(){
+    public String getPhilosophy(){
     	return philosophy;
     }
     
@@ -134,7 +134,7 @@ public class User {
     	this.poetry = poetry;
     }
     
-    public boolean getPoetry(){
+    public String getPoetry(){
     	return poetry;
     }
     
@@ -142,7 +142,7 @@ public class User {
     	this.adventure = adventure;
     }
     
-    public boolean getAdventure(){
+    public String getAdventure(){
     	return adventure;
     }
     
@@ -151,7 +151,7 @@ public class User {
             this.cooking = cooking;
     }
     
-    public boolean getCooking(){
+    public String getCooking(){
     	return cooking;
     }
     
@@ -159,7 +159,7 @@ public class User {
     	this.scifi = scifi;
     }
     
-    public boolean getScifi(){
+    public String getScifi(){
     	return scifi;
     }
     

@@ -13,6 +13,11 @@
     <img  src="../images/background_login.png" id="backgroundloginimage">
     
   <main id="mainHolder">
+
+    <% if(request.getAttribute("message") != null) { %>		
+      <div class="alert alert-danger text-center" role="alert"><%=(String)request.getAttribute("message") %></div>
+  <% } %>
+  
     <form id="login-form" method="post" action="loginController.jsp">
       <h2 id="title"  style="text-align: center; color:#825e41 ; font-size: x-large;" >Login Form</h2>
       <hr>
@@ -46,26 +51,26 @@
         
         <form >  
           <div style=" float:left;  margin-right: 5%;">
-          <input type="checkbox" name="category" value="1 " >
+          <input type="checkbox" name="1" value="1 " >
           <label for="βιογραφίες-αυτοβιογραφίες "> βιογραφίες-αυτοβιογραφίες <br>
 
           </label><br>
-          <input type="checkbox" name="category" value="2"> 
+          <input type="checkbox" name="2" value="1"> 
           <label for=" τέχνη"> τέχνη <br>
 
           </label><br>
-          <input type="checkbox" name="category" value="3">
+          <input type="checkbox" name="3" value="1">
           <label for=" Αστυνομικά-Θρίλερ "> Αστυνομικά-Θρίλερ <br>
              </label><br>
-          <input type="checkbox" name="category" value="4">
+          <input type="checkbox" name="4" value="1">
           <label for=" Αυτοβελτίωση-Ψυχολογία"> Αυτοβελτίωση-Ψυχολογία <br>
 
           </label><br>
-          <input type="checkbox" name="category" value="5" > 
+          <input type="checkbox" name="5" value="1" > 
           <label for=" Ιστορία"> Ιστορία <br>
             
           </label><br>
-          <input type="checkbox" name="category" value="6" >
+          <input type="checkbox" name="6" value="1" >
           <label for="Ρομαντικά "> Ρομαντικά <br>
           </label><br>
           </div>
@@ -73,27 +78,27 @@
 
           <div style=" float:left; margin-left: 5%;">
           
-          <input type="checkbox" name="category" value="7" >
+          <input type="checkbox" name="7" value="1" >
           <label for="  Οικονομικά "> Οικονομικά <br>
 
           </label><br>
-          <input type="checkbox" name="category" value="8" > 
+          <input type="checkbox" name="8" value="1" > 
           <label for=" Φιλοσοφία "> Φιλοσοφία  <br>
 
           </label><br>
-          <input type="checkbox" name="category" value="9" > 
+          <input type="checkbox" name="9" value="1" > 
           <label for="Ποίηση "> Ποίηση<br>
 
           </label><br>
-          <input type="checkbox" name="category" value="10" > 
+          <input type="checkbox" name="10" value="1" > 
           <label for="Περιπέτεια "> Περιπέτεια <br>
 
           </label><br>
-          <input type="checkbox" name="category" value="11" > 
+          <input type="checkbox" name="11" value="1" > 
           <label for="  Μαγειρική"> Μαγειρική<br>
 
           </label><br>
-          <input type="checkbox" name="category" value="12" > 
+          <input type="checkbox" name="12" value="1" > 
           <label for="Επιστημονικής Φαντασίας"> Επιστημονικής Φαντασίας <br>
 
           </label><br>

@@ -26,7 +26,7 @@ public class UserDAO {
 
 		            while (rs.next()) {
 
-		                users.add(new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getBoolean("BIOGRAPHY"),rs.getBoolean("ART"),rs.getBoolean("THRILLER"),rs.getBoolean("PSYCHOLOGY"),rs.getBoolean("HISTORY"), rs.getBoolean("ROMANCE"),rs.getBoolean("ECONOMY"),rs.getBoolean("PHILOSOPHY"),rs.getBoolean("POETRY"),rs.getBoolean("ADVENTURE"),rs.getBoolean("COOKING"),rs.getBoolean("SCI_FI")));
+		                users.add(new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getString("BIOGRAPHY"),rs.getString("ART"),rs.getString("THRILLER"),rs.getString("PSYCHOLOGY"),rs.getString("HISTORY"), rs.getString("ROMANCE"),rs.getString("ECONOMY"),rs.getString("PHILOSOPHY"),rs.getString("POETRY"),rs.getString("ADVENTURE"),rs.getString("COOKING"),rs.getString("SCI_FI")));
 
 		            }
 
@@ -75,7 +75,7 @@ public class UserDAO {
 				throw new Exception("Wrong username or password");
 			}
 
-			User user = new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getBoolean("BIOGRAPHY"),rs.getBoolean("ART"),rs.getBoolean("THRILLER"),rs.getBoolean("PSYCHOLOGY"),rs.getBoolean("HISTORY"), rs.getBoolean("ROMANCE"),rs.getBoolean("ECONOMY"),rs.getBoolean("PHILOSOPHY"),rs.getBoolean("POETRY"),rs.getBoolean("ADVENTURE"),rs.getBoolean("COOKING"),rs.getBoolean("SCI_FI"));
+			User user = new User( rs.getString("USERNAME"),rs.getString("PASSWORD"), rs.getInt("POINTER"),rs.getString("BIOGRAPHY"),rs.getString("ART"),rs.getString("THRILLER"),rs.getString("PSYCHOLOGY"),rs.getString("HISTORY"), rs.getString("ROMANCE"),rs.getString("ECONOMY"),rs.getString("PHILOSOPHY"),rs.getString("POETRY"),rs.getString("ADVENTURE"),rs.getString("COOKING"),rs.getString("SCI_FI"));
 			rs.close();
 			stmt.close();
 			db.close();
@@ -130,19 +130,19 @@ public class UserDAO {
 				// setting parameters
 				stmt.setString(1, user.getUsername());
 				stmt.setString(2, user.getPassword());
-				stmt.setInt(3,user.getUserId());
-				stmt.setBoolean(4, user.getBiography());
-				stmt.setBoolean(5, user.getArt());
-				stmt.setBoolean(6, user.getThriller());
-				stmt.setBoolean(7, user.getPsychology());
-				stmt.setBoolean(8, user.getHistory());
-				stmt.setBoolean(9, user.getRomance());
-				stmt.setBoolean(10, user.getEconomy());
-				stmt.setBoolean(11, user.getPhilosophy());
-				stmt.setBoolean(12, user.getPoetry());
-				stmt.setBoolean(13, user.getAdventure());
-				stmt.setBoolean(14, user.getCooking());
-				stmt.setBoolean(15, user.getScifi());
+				stmt.setInt(3,user.getpointer());
+				stmt.setString(4, user.getBiography());
+				stmt.setString(5, user.getArt());
+				stmt.setString(6, user.getThriller());
+				stmt.setString(7, user.getPsychology());
+				stmt.setString(8, user.getHistory());
+				stmt.setString(9, user.getRomance());
+				stmt.setString(10, user.getEconomy());
+				stmt.setString(11, user.getPhilosophy());
+				stmt.setString(12, user.getPoetry());
+				stmt.setString(13, user.getAdventure());
+				stmt.setString(14, user.getCooking());
+				stmt.setString(15, user.getScifi());
 
 				stmt.executeUpdate();
 				stmt.close();

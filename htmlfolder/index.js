@@ -18,7 +18,7 @@ button.onclick = function(){
         checkbox_title.className = "";
         confirm_password.className = "";
         button.innerHTML = "Create Account";
-        location.href = 'wishlist.jsp';
+        location.href = 'loginController.jsp';
 
       } else{
         checkbox.className = "open";
