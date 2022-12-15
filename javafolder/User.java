@@ -17,7 +17,7 @@ public class User {
 	private String adventure;
 	private String cooking;
 	private String scifi;
-	
+
     public User( String username, String password, int pointer, String biography,String art, String thriller,String psychology,String history,String romance,String economy,String philosophy,String poetry,String adventure,String cooking,String scifi) {
         this.username = username;
         this.password = password;
@@ -35,7 +35,7 @@ public class User {
         this.cooking = cooking;
         this.scifi = scifi;
     }
-    
+
 
     public String getUsername() {
         return username;
@@ -52,116 +52,116 @@ public class User {
     public String getPassword() {
         return password;
     }
-    
-    
+
+
     public void setpointer(){
     	this.pointer = pointer;
     }
-    
+
     public int getpointer(){
-            return pointer;
+         return pointer;
     }
-    
-    
+
+
     public void setBiography(){
         this.biography = biography;
     }
-    
+
     public String getBiography(){
          return biography;
     }
-    
+
     public void setArt(){
          this.art = art;
     }
-    
+
     public String getArt(){
     	return art;
     }
-    
+
     public void setThriller(){
     	this.thriller = thriller;
     }
-    
+
     public String getThriller(){
     	return thriller;
     }
-    
+
     public void setPsychology(){
     	this.psychology = psychology;
     }
-    
+
     public String getPsychology(){
     	return psychology;
     }
-    
-    
+
+
     public void setHistory(){
     	this.history = history;
     }
-    
+
     public String getHistory(){
     	return history;
     }
-    
-    
+
+
     public void setRomance(){
     	this.romance = romance;
     }
-    
+
     public String getRomance(){
     	return romance;
     }
-    
-    
+
+
     public void setEconomy(){
     	this.economy = economy;
     }
-    
+
     public String getEconomy(){
     	return economy;
     }
-    
+
     public void setPhilosophy(){
     	this.philosophy = philosophy;
     }
-    
+
     public String getPhilosophy(){
     	return philosophy;
     }
-    
+
     public void setPoetry(){
     	this.poetry = poetry;
     }
-    
+
     public String getPoetry(){
     	return poetry;
     }
-    
+
     public void setAdventure(){
     	this.adventure = adventure;
     }
-    
+
     public String getAdventure(){
     	return adventure;
     }
-    
-    
+
+
     public void setCooking(){
             this.cooking = cooking;
     }
-    
+
     public String getCooking(){
     	return cooking;
     }
-    
+
     public void setScifi(){
     	this.scifi = scifi;
     }
-    
+
     public String getScifi(){
     	return scifi;
     }
-    
+
 
 }
