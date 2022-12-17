@@ -96,4 +96,53 @@ public class BookService {
 
 }
 
+public List<Book> searchBook(String username) throws Exception{
+
+			List<Book> books = new ArrayList<Book>();
+			String sql = "SELECT * FROM wishlist WHERE username=?";
+			Connection con = null;
+			DB db = new DB();
+
+			try {
+
+				con = db.getConnection();
+				PreparedStatement stmt = con.prepareStatement(sql);
+				stmt.setString(2,username);
+
+				ResultSet rs = stmt.executeQuery();
+
+				if (!rs.next()) {
+
+					rs.close();
+					stmt.close();
+					db.close();
+					return null;
+				}
+
+				while (rs.next()) {
+
+					books.add(new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης")));
+
+		        }
+				rs.close();
+				stmt.close();
+				db.close();
+
+				return books;
+
+
+			} catch (Exception e) {
+
+				throw new Exception(e.getMessage());
+
+			} finally {
+
+				try {
+					db.close();
+				} catch (Exception e) {
+
+			}
+	}
+}
+
 }

@@ -238,6 +238,18 @@ body {
   width: 70%;
   background-color: #81420e;
   align-self: center;
-  position:relative;
+  
   left: auto;
+
+  
+    
+  position: absolute;
+    
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #cbc5bc;
+  border-radius: 20px;
+
+  height: 60%;
 }
