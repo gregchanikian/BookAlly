@@ -25,7 +25,7 @@ public class BookService {
 
 		            while (rs.next()) {
 
-		                books.add(new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης")));
+		                books.add(new Book( rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getInt("book_id"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½")));
 
 		            }
 
@@ -72,7 +72,7 @@ public class BookService {
 				return null;
 			}
 
-			Book book = new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης"));
+			Book book = new Book( rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getInt("book_id"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"));
 			rs.close();
 			stmt.close();
 			db.close();
@@ -121,7 +121,7 @@ public List<Book> searchBook(String username) throws Exception{
 
 				while (rs.next()) {
 
-					books.add(new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης")));
+						books.add(new Book( rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getInt("book_id"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½")));
 
 		        }
 				rs.close();
