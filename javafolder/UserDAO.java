@@ -54,7 +54,7 @@ public class UserDAO {
 	public User authenticate(String username, String password) throws Exception {
 
 
-		String sql = "SELECT * FROM user WHERE username=? AND password=?";
+		String sql = "SELECT * FROM user WHERE username=? AND password=? ;";
 		Connection con = null;
 		DB db = new DB();
 
@@ -102,7 +102,69 @@ public class UserDAO {
 	public void createAccount(User user) throws Exception {
 
 
-		String sql = "INSERT INTO user"
+		String sql = "SELECT * FROM user WHERE username = ? ;";
+        Connection con = null;
+        DB db = new DB();
+
+		try {
+
+            con = db.getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString( 1, user.getUsername() );
+			
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+
+                rs.close();
+                stmt.close();
+                db.close();
+                throw new Exception("Sorry, username or email already registered.");
+
+            }else{
+                sql = "INSERT INTO  user " 
+                + " (USERNAME, PASSWORD, POINTER, BIOGRAPHY, ART, THRILLER, PSYCHOLOGY, HISTORY, ROMANCE, ECONOMY, PHILOSOPHY, POETRY, ADVENTURE, COOKING, SCI_FI ) VALUES (?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+				PreparedStatement stmt2 = con.prepareStatement(sql);
+				// setting parameters
+				stmt2.setString(1, user.getUsername());
+				stmt2.setString(2, user.getPassword());
+				stmt2.setInt(3,user.getpointer());
+				stmt2.setString(4, user.getBiography());
+				stmt2.setString(5, user.getArt());
+				stmt2.setString(6, user.getThriller());
+				stmt2.setString(7, user.getPsychology());
+				stmt2.setString(8, user.getHistory());
+				stmt2.setString(9, user.getRomance());
+				stmt2.setString(10, user.getEconomy());
+				stmt2.setString(11, user.getPhilosophy());
+				stmt2.setString(12, user.getPoetry());
+				stmt2.setString(13, user.getAdventure());
+				stmt2.setString(14, user.getCooking());
+				stmt2.setString(15, user.getScifi());
+				
+				stmt2.executeUpdate();
+				stmt2.close();
+           		db.close();
+
+			}
+
+  
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        } finally {
+            try {
+                db.close();
+            } catch (Exception e) {
+                
+            }
+        }
+		
+	}//end of register
+
+
+		/*String sql = "INSERT INTO user"
             + " (USERNAME, PASSWORD, POINTER, BIOGRAPHY, ART, THRILLER, PSYCHOLOGY, HISTORY, ROMANCE, ECONOMY, PHILOSOPHY, POETRY, ADVENTURE, COOKING, SCI_FI ) VALUES (?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
 		String sql1 = "SELECT * FROM user WHERE username = '"+user.getUsername()+"'";
@@ -163,6 +225,6 @@ public class UserDAO {
 
 				}
 		}
-	}
+	}*/
 
 }
