@@ -3,7 +3,7 @@
 
 
 <script>
-    if(mainHolder.className != "open"){
+    if(mainHolder.className.equals("open")){
 </script>
     <%
     String username = request.getParameter("username");
@@ -51,8 +51,6 @@
     boolean errors = true;
     if ( newPassword.equals(Confirm) && username.length() > 3) {
     errors = false;
-    }else{
-        errors = true;
     }
     %>	
     
@@ -75,18 +73,18 @@
 				%>
 				
 
-				<jsp:forward page="wishlist.jsp" />
+				
 				
 				
 				<% } %>
 
 
-			<% }else{ %>
-				
-				<jsp:forward page="wishlist.jsp" />
+<% }else{ %>
+    request.setAttribute("message", e.getMessage());
+            <jsp:forward page="login.jsp" />
 					
 				
-			<% } %>
+<% } %>
 	
 
 

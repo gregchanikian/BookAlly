@@ -12,12 +12,7 @@ button.onclick = function(){
 
       
       if(mainHolder.className == "open"){
-        loginformsubmit = "";
-        mainHolder.className = "";
-        checkbox.className = "";
-        checkbox_title.className = "";
-        confirm_password.className = "";
-        button.innerHTML = "Create Account";
+        
         location.href = 'loginController.jsp';
 
       } else{
@@ -28,6 +23,7 @@ button.onclick = function(){
         button.innerHTML = "Login";
         button.style.fontSize = "140%";
 
+        
         loginformsubmit.style.display = "none";
         form_title.innerHTML = "Create Account"
         
