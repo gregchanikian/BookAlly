@@ -20,14 +20,59 @@ String checkbox12 = request.getParameter("c12");
 
 
 UserDAO userDAO = new UserDAO();
-boolean errors = false;  
+int checkboxCount = 0;
+
+
+if (!(checkbox1 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox2 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox3 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox4 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox5 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox6 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox7 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox8 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox9 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox10 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox11 == null)) {
+    checkboxCount++;
+}
+if (!(checkbox12 == null)) {
+    checkboxCount++;
+}
+
+
+
+boolean errors = true;  
+if ( newpassword.equals(Confirm) && newusername.length() > 3 && checkboxCount > 3) {
+    errors = false;
+}
 
 if(!errors) { 
 				
     
     try {
         
-        User user =  new User(newusername, newpassword, 0, "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" );
+        User user =  new User(newusername, newpassword, 0, checkbox1, checkbox2 , checkbox3, checkbox4, checkbox5, checkbox6, checkbox7, checkbox8, checkbox9, checkbox10, checkbox11, checkbox12 );
         userDAO.createAccount(user);  
     %>
 
@@ -39,8 +84,18 @@ if(!errors) {
      } %>
      <jsp:forward page="login.jsp" />
 
-<% }else{ %>
+<% }else{ 
    
+    if (!( newpassword.equals(Confirm))){
+        request.setAttribute("message", "Password and Confirm DO NOT match!");
+    }
+    if ( newusername.length() <= 3 ){
+        request.setAttribute("message", "Username must contain more than 3 characters!");
+    }
+    if ( checkboxCount < 4 ){
+        request.setAttribute("message", "You must choose more than 3 Book Categories!");
+    }%>
 
+    <jsp:forward page="login.jsp" />
 <% } %>
 
