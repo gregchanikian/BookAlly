@@ -132,7 +132,6 @@ a {
     <br>
     <br>
     <div id="logout-div" >
-        <img src="../images/logout-icon.png" alt="">
         <a id="menu-link" href="logout.jsp">Logout</a>
     </div>
 
