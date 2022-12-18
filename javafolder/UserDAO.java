@@ -120,7 +120,7 @@ public class UserDAO {
                 rs.close();
                 stmt.close();
                 db.close();
-                throw new Exception("Sorry, username or email already registered.");
+                throw new Exception("Sorry, username already registered.");
 
             }else{
                 sql = "INSERT INTO  user " 

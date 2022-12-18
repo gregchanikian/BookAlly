@@ -76,7 +76,7 @@ if(!errors) {
         userDAO.createAccount(user);  
     %>
 
-    <jsp:forward page="bookbrowsing.jsp" />
+    <jsp:forward page="wishlist.jsp?count=0&time=1" />
     <%
     }catch (Exception e) {
         request.setAttribute("message", e.getMessage());
