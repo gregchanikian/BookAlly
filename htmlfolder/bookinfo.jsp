@@ -12,7 +12,7 @@
       <body>
     
         <img  src="../images/book_info.png" id="backgroundinfo">
-
+       
         <h1 id="title">BookAlly</h1>
 
 
@@ -35,8 +35,9 @@
     int id = Integer.parseInt(id_int);
     Book asked_book = (Book)bService.findBook(id);
 %>
-
+        <img src="../images/<%=id %>.jpg " id="book" >
         <main id="main-holder">
+          
             <form id="info-form">
               
                 <h2 style=" color: #531604; font-size: 180%; margin: auto; font-weight: bold;  margin-top: 2%; margin-bottom: 2%;  position:relative; width: fit-content;" ><%= asked_book.getTitle() %></h2>
