@@ -113,15 +113,16 @@ a {
 
        
   <div id="menu_catalog"> 
-    <div id="option1">
+    <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
         <a id="menu-link" href="search.jsp">Search</a>
+      </li>
     </div>
     <br>
-    <div id="option2">
+    <div id="option2" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("bookbrowsing.jsp") ? "active" : ""  %>" >
         <a id="menu-link" href="bookbrowsing.jsp">Explore new books</a>
     </div>
     <br>
-    <div id="option3">   
+    <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp") ? "active" : ""  %>" >   
         <a id="menu-link" href="wishlist.jsp">Visit your wishlist</a>
     </div>
     <br>

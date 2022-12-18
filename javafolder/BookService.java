@@ -98,7 +98,7 @@ public class BookService {
 public List<Book> searchBook(String username) throws Exception{
 
 			List<Book> books = new ArrayList<Book>();
-			String sql = "SELECT * FROM wishlist WHERE username=?";
+			String sql = "SELECT * FROM wishlist,book_info WHERE wishlist.book_id=book_info.Book_id AND wishlist.username=?";
 			Connection con = null;
 			DB db = new DB();
 
@@ -106,7 +106,7 @@ public List<Book> searchBook(String username) throws Exception{
 
 				con = db.getConnection();
 				PreparedStatement stmt = con.prepareStatement(sql);
-				stmt.setString(2,username);
+				stmt.setString(1,username);
 
 				ResultSet rs = stmt.executeQuery();
 

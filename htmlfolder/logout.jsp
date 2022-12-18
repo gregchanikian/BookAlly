@@ -10,19 +10,16 @@
 		
 	<meta name="description" content="log out page">
 	<meta name="author" content="t8200067@aueb.gr">
-	
-	<title>logout</title>
-
+	<link rel="stylesheet" href="../cssfolder/wishlist.css">
+	<title>Logout</title>
 	
 	</head>
 <body>	
-
-	<div class="container theme-showcase" role="main">
-
-		<div class="alert alert-success text-center" role="alert">Η έξοδος πραγματοποιηθηκε με επιτυχία</div>		
-
-	</div>
-	
+	<img  src="../images/BackgroundImage.png" id="backgroundImage">
+	<h1 id="HeadTitle">BookAlly</h1>
+	<form id="alert-form">
+		<h2><font color="#81420e">Πραγματοποιήθηκε έξοδος με επιτυχία.</font></h2>
+	</form>
 	
 </body>
 </html>
