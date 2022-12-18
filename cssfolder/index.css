@@ -65,10 +65,35 @@ html {
     transition:width 0.7s;
   }
   
-  #login-form {
-    
+  #login_form {
     width: 70%;
     height: 90%;
+    align-self: center;
+    position:relative;
+    left: auto;
+    
+  }
+
+
+  #login_form.open {
+    display: none;
+    
+  }
+
+  #register_form {
+    display: none;
+    width: 70%;
+    height: 90%;
+    align-self: center;
+    position:relative;
+    left: auto;
+  }
+
+
+  #register_form.open {
+    display: unset;
+    width: 70%;
+    height: 100%;
     align-self: center;
     position:relative;
     left: auto;
@@ -91,13 +116,6 @@ html {
     font-size: xx-large;
   }
 
-  #cpassword-field {
-    display: none;
-  }
-
-  #cpassword-field.open {
-    display: unset;
-  }
   
   
   #loginformsubmit {
@@ -115,23 +133,16 @@ html {
     margin-top: 20%;
   }
 
-  #checkbox_title{
-    display: none;
-  }
 
-  #checkbox_title.open{
+  #checkbox_title{
     display: grid;
     height: fit-content;
     font-size: x-large;
     margin: 0%;
   }
 
-  #checkbox{
-    display: none;
-    
-  }
 
-  #checkbox.open{
+  #checkbox{
    
     width: 100%;
     font-size: larger;
@@ -139,6 +150,24 @@ html {
   }
 
 
+  #register{
+    height: fit-content;
+    width: fit-content;
+
+    position: absolute; 
+    right: 3%; 
+    bottom: 3%; 
+    
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+
+    background-color: #825e41;
+    color: #cbc5bc;
+
+    font-size: 120%;
+    cursor: pointer;
+  }
 
   #create_account{
     height: fit-content;

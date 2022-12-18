@@ -1,31 +1,28 @@
  
 var mainHolder = document.getElementById("mainHolder");
 var button = document.getElementById("create_account");
-var loginformsubmit = document.getElementById("loginformsubmit");
-var loginformfield = document.getElementById("loginformfield");
-var checkbox = document.getElementById("checkbox")
-var checkbox_title = document.getElementById("checkbox_title")
-var form_title = document.getElementById("title")
-var confirm_password = document.getElementById("cpassword-field")
+var login_form = document.getElementById("login_form");
+var register_form = document.getElementById("register_form");
+
+
 
 button.onclick = function(){
 
       
       if(mainHolder.className == "open"){
         
-        location.href = 'loginController.jsp';
+        login_form.className = "";
+        register_form.className = "";
+        mainHolder.className = "";
+        button.innerHTML = "Create Account";
+        location.href = 'registerController.jsp';
 
       } else{
-        checkbox.className = "open";
+        login_form.className = "open";
+        register_form.className = "open";
         mainHolder.className = "open";
-        checkbox_title.className = "open";
-        confirm_password.className = "open";
-        button.innerHTML = "Login";
+        button.style.display = "none";
         button.style.fontSize = "140%";
-
-        
-        loginformsubmit.style.display = "none";
-        form_title.innerHTML = "Create Account"
         
       }
 }
