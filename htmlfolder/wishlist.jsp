@@ -73,7 +73,7 @@ List<User> users = UserDao.getUsers();
                     %>
                         <a href="bookinfo.jsp?id=<%=books.get(i).getBookId() %>"><img src="../images/<%=books.get(i).getBookId() %>.jpg" id="book<%=bookPosition%>"></a>
                     <%}
-                    if((i-16) > 0){
+                    if((counter-16) > 0){
                     %>
                         <a id="a1" href="wishlist.jsp?count=<%=i%>&time=3" data-toggle="tooltip" title="Προηγούμενο" >&#8249;</a>
                     <%
