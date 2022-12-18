@@ -122,8 +122,8 @@ a {
         <a id="menu-link" href="bookbrowsing.jsp">Explore new books</a>
     </div>
     <br>
-    <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp") ? "active" : ""  %>" >   
-        <a id="menu-link" href="wishlist.jsp">Visit your wishlist</a>
+    <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp?count=0&time=1") ? "active" : ""  %>" >   
+        <a id="menu-link" href="wishlist.jsp?count=0&time=1">Visit your wishlist</a>
     </div>
     <br>
     <br>
