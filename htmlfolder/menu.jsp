@@ -142,7 +142,7 @@ a {
        
   <div id="menu_catalog"> 
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
-      <form action="bookinfo.jsp">
+      <form action="search.jsp">
         <input type="text" placeholder="Search a book.." name="search">
       </form>
       </li>

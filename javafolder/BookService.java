@@ -145,7 +145,7 @@ public List<Book> searchBook(String username) throws Exception{
 	}
 }
 
-public Book findBookbyTitle(String search) throws Exception {
+public Book findBookbyTitle(String title) throws Exception {
 
 	String sql = "SELECT * FROM book_info WHERE Τίτλος =?";
 	Connection con = null;
@@ -155,7 +155,7 @@ public Book findBookbyTitle(String search) throws Exception {
 
 		con = db.getConnection();
 		PreparedStatement stmt = con.prepareStatement(sql);
-		stmt.setString(1,search);
+		stmt.setString(1,title);
 
 		ResultSet rs = stmt.executeQuery();
 
