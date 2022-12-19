@@ -22,14 +22,14 @@
   
   <img  id="book" src="../images/Book.jpg">
   
-  <button id="discard">
+  <a href="" id="discard">
     <img src="../images/discardArrow.png" alt="discardArrow" />
-  </button>
+  </a>
 
 
-  <button id="save">
+  <a href="" id="save">
     <img src="../images/saveArrow.png" alt="saveArrow"  />
-  </button>
+  </a>
 </body>
 
 </html>
