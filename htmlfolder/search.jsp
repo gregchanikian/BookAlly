@@ -6,4 +6,11 @@
 
     try{
     Book book = (Book)bService.findBookbyTitle(title);
+    %>
+    <jsp: forward page = "bookinfo.jsp?id=<%=getBookId()%>"/>
+    <% }catch(Exception e) {
+        request.setAttribute("message", e.getMessage());
+        %>
+    <jsp: forward pade = "<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1)%>" />
+    %>
     }
