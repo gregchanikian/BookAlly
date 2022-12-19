@@ -40,7 +40,7 @@
     transition:width 1.2s;
   }
   
-  #menu_button{
+   #menu_button{
     position: absolute;
     left: 2%;
     top: 3%;
@@ -67,7 +67,7 @@ a {
 }
 
 #menu-link:link {
-  color: red;
+  color: rgba(202, 67, 4, 0.726);
 }
 
 
@@ -106,6 +106,34 @@ a {
     top: 80%;
     left: 38%
 }
+
+#option1 input {
+  border-radius: 12px;
+  background: #e2c8a98e;
+  border: transparent;
+  height: 35px;
+  width: 100%;
+  position: relative;
+  font-size: medium;
+}
+#option1:hover {
+  border: transparent;
+}
+/*#option1 button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+#option1 button:hover {
+  background: #ccc;
+} */
+
 </style>
 
 
@@ -114,7 +142,9 @@ a {
        
   <div id="menu_catalog"> 
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
-        <a id="menu-link" href="search.jsp">Search</a>
+      <form action="bookinfo.jsp">
+        <input type="text" placeholder="Search a book.." name="search">
+      </form>
       </li>
     </div>
     <br>
@@ -132,7 +162,6 @@ a {
     <br>
     <br>
     <div id="logout-div" >
-        <img src="../images/logout-icon.png" alt="">
         <a id="menu-link" href="logout.jsp">Logout</a>
     </div>
 
