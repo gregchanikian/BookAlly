@@ -67,12 +67,12 @@ a {
 }
 
 #menu-link:link {
-  color: rgba(202, 67, 4, 0.726);
+  color: #503524;
 }
 
 
 #menu-link:visited {
-  color: 81420e;
+  color: #503524;
 }
 
 
@@ -81,7 +81,7 @@ a {
 }
 
 #menu-link:active {
-  color: 81420e;
+  color: #503524;
 }
 
 #option1{
@@ -92,20 +92,35 @@ a {
 
 #option2{
     position: absolute;
-    left: 2%;
+    left: 0%;
     top: 30%;
+    width:100%;
+    height: 20%;
+    background-color: #F5E9DB;
+}
+#option2:hover {
+  background-color: #e2c8a98e;
 }
 
 #option3{
     position: absolute;
-    left: 2%;
+    left: 0%;
     top: 45%;
+    height: 15%;
+    width:100%;
+    background-color: #F5E9DB;
 }
+
+#option3:hover {
+  background-color: #e2c8a98e;
+}
+
 #logout-div{
     position: absolute;
     top: 80%;
-    left: 38%
+    left: 38%;
 }
+
 
 #option1 input {
   border-radius: 12px;
@@ -142,18 +157,28 @@ a {
        
   <div id="menu_catalog"> 
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+      <form action="bookinfo.jsp">
+        <input type="text" placeholder="Search a book..." name="search">
+=======
+>>>>>>> Stashed changes
       <form action="search.jsp">
         <input type="text" placeholder="Search a book.." name="search">
+>>>>>>> 126f60674adfb8b0e607d41f9b6521a436b32f51
       </form>
       </li>
     </div>
     <br>
     <div id="option2" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("bookbrowsing.jsp") ? "active" : ""  %>" >
-        <a id="menu-link" href="bookbrowsing.jsp">Explore new books</a>
+        <br>
+        <a id="menu-link" href="bookbrowsing.jsp"> Explore new books</a>
     </div>
     <br>
     <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp?count=0&time=1") ? "active" : ""  %>" >   
-        <a id="menu-link" href="wishlist.jsp?count=0&time=1">Visit your wishlist</a>
+        <br>
+        <a id="menu-link" href="wishlist.jsp?count=0&time=1"> Visit your wishlist</a>
     </div>
     <br>
     <br>
@@ -170,8 +195,8 @@ a {
 </main>
 <a id="menu_button">
     <div style=" float:left;  margin-right: 10%; margin-left: 10%; margin-top: 5% ;">
-        <img src="../images/menu_icon2.png" alt="">
-        <p style="font-size: x-large;  float:right; margin-left: 42%; margin-top: -36%;">  Menu</p>
+        <img src="../images/menuIcon.png" alt="">
+        <p style="font-size: x-large; color:81420e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; float:right; margin-left: 42%; margin-top: -34%;">  Menu</p>
     </div>   
 </a>
 
