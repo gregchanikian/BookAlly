@@ -7,7 +7,7 @@
     try{
     Book book = (Book)bService.findBookbyTitle(title);
     %>
-    <jsp: forward page = "bookinfo.jsp?id=<%=getBookId()%>"/>
+    <jsp: forward page = "bookinfo.jsp?id=<%=book.getBookId()%>"/>
     <% }catch(Exception e) {
         request.setAttribute("message", e.getMessage());
         %>

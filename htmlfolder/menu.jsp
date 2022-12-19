@@ -157,18 +157,10 @@ a {
        
   <div id="menu_catalog"> 
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-      <form action="bookinfo.jsp">
-        <input type="text" placeholder="Search a book..." name="search">
-=======
->>>>>>> Stashed changes
       <form action="search.jsp">
         <input type="text" placeholder="Search a book.." name="search">
->>>>>>> 126f60674adfb8b0e607d41f9b6521a436b32f51
       </form>
-      </li>
+      
     </div>
     <br>
     <div id="option2" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("bookbrowsing.jsp") ? "active" : ""  %>" >
