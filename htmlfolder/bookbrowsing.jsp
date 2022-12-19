@@ -22,8 +22,14 @@
   
   <img  id="book" src="../images/Book.jpg">
   
-  <a id="a1" href="" data-toggle="tooltip" title="Προηγούμενο" >&#8249;</a>
-  <a id="a2" href="" data-toggle="tooltip" title="Επόμενο">&#8250;</a> 
+  <button id="discard">
+    <img src="../images/discardArrow.png" alt="discardArrow" />
+  </button>
+
+
+  <button id="save">
+    <img src="../images/saveArrow.png" alt="saveArrow"  />
+  </button>
 </body>
 
 </html>

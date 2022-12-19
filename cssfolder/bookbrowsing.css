@@ -79,7 +79,7 @@ html {
 
 }
   
-#a1{
+#discard{
   text-decoration: none;
   color: #4b1803;
   background: #f5e9db;
@@ -91,14 +91,10 @@ html {
   vertical-align: middle;
   object-fit: cover;
 }
-#a1:hover{
-  background: #81420e; 
-}
-#a1:focus{
-  outline: 3px solid rgb(27, 15, 0);
-}
 
-#a2{
+
+
+#save{
   text-decoration: none;
   color: #4b1803;
   background: #f5e9db;
@@ -109,10 +105,4 @@ html {
   right: 20%;
   vertical-align: middle;
   object-fit: cover;
-}
-#a2:hover{
- background: #81420e; 
-}
-#a2:focus{
- outline: 3px solid rgb(27, 15, 0);
 }
