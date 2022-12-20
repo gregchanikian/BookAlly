@@ -29,13 +29,18 @@
         <% 
         } %>
 
-<%  BookService bService = new BookService();
-    String id_int = request.getParameter("id");
+
+<% Book asked_book = (Book)request.getAttribute ("search_book");
+  if (asked_book == null) {
+    BookService bService = new BookService();
+    String id_string = request.getParameter("id");
     
-    int id = Integer.parseInt(id_int);
-    Book asked_book = (Book)bService.findBook(id);
+    int id = Integer.parseInt(id_string);
+    asked_book = (Book)bService.findBook(id);
+  }
+  
 %>
-        <img src="../images/<%=id %>.jpg " id="book" >
+        <img src="../images/<%=asked_book.getBookId() %>.jpg " id="book" >
         <main id="main-holder">
           
             <form id="info-form">
