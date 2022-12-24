@@ -25,7 +25,7 @@ public class BookService {
 
 		            while (rs.next()) {
 
-						 books.add(new Book( rs.getString("ΞΞ±Ο„Ξ·Ξ³ΞΏΟΞ―Ξ±"),rs.getInt("book_id"),rs.getString("Ξ¤Ξ―Ο„Ξ»ΞΏΟ‚"),rs.getString("Ξ£Ο…Ξ³Ξ³ΟΞ±Ο†Ξ­Ξ±Ο‚"),rs.getString("Ξ ΞµΟΞΉΞ³ΟΞ±Ο†Ξ®"),rs.getString("Ξ£ΞµΞ»Ξ―Ξ΄ΞµΟ‚"),rs.getString("Ξ§ΟΞΏΞ½ΞΏΞ»ΞΏΞ³Ξ―Ξ±"),rs.getString("Ξ•ΞΊΞ΄ΟΟ„Ξ·Ο‚")));
+						 books.add(new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης")));
 		            }
 
 		            rs.close();
@@ -71,7 +71,7 @@ public class BookService {
 				return null;
 			}
 
-			Book book = new Book( rs.getString("ΞΞ±Ο„Ξ·Ξ³ΞΏΟΞ―Ξ±"),rs.getInt("book_id"),rs.getString("Ξ¤Ξ―Ο„Ξ»ΞΏΟ‚"),rs.getString("Ξ£Ο…Ξ³Ξ³ΟΞ±Ο†Ξ­Ξ±Ο‚"),rs.getString("Ξ ΞµΟΞΉΞ³ΟΞ±Ο†Ξ®"),rs.getString("Ξ£ΞµΞ»Ξ―Ξ΄ΞµΟ‚"),rs.getString("Ξ§ΟΞΏΞ½ΞΏΞ»ΞΏΞ³Ξ―Ξ±"),rs.getString("Ξ•ΞΊΞ΄ΟΟ„Ξ·Ο‚"));
+			Book book = new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης"));
 			rs.close();
 			stmt.close();
 			db.close();
@@ -120,7 +120,7 @@ public List<Book> searchBook(String username) throws Exception{
 				while (rs.next()) {
 
 
- 					books.add(new Book( rs.getString("ΞΞ±Ο„Ξ·Ξ³ΞΏΟΞ―Ξ±"),rs.getInt("book_id"),rs.getString("Ξ¤Ξ―Ο„Ξ»ΞΏΟ‚"),rs.getString("Ξ£Ο…Ξ³Ξ³ΟΞ±Ο†Ξ­Ξ±Ο‚"),rs.getString("Ξ ΞµΟΞΉΞ³ΟΞ±Ο†Ξ®"),rs.getString("Ξ£ΞµΞ»Ξ―Ξ΄ΞµΟ‚"),rs.getString("Ξ§ΟΞΏΞ½ΞΏΞ»ΞΏΞ³Ξ―Ξ±"),rs.getString("Ξ•ΞΊΞ΄ΟΟ„Ξ·Ο‚")));
+ 					books.add(new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης")));
  				}
 
 				rs.close();
@@ -146,7 +146,7 @@ public List<Book> searchBook(String username) throws Exception{
 
 public Book findBookbyTitle(String title) throws Exception {
 
-	String sql = "SELECT * FROM book_info WHERE Ξ¤Ξ―Ο„Ξ»ΞΏΟ‚ =?";
+	String sql = "SELECT * FROM book_info WHERE Τίτλος =?";
 	Connection con = null;
 	DB db = new DB();
 
@@ -166,7 +166,7 @@ public Book findBookbyTitle(String title) throws Exception {
 			return null;
 		}
 
-		Book book = new Book( rs.getString("ΞΞ±Ο„Ξ·Ξ³ΞΏΟΞ―Ξ±"),rs.getInt("book_id"),rs.getString("Ξ¤Ξ―Ο„Ξ»ΞΏΟ‚"),rs.getString("Ξ£Ο…Ξ³Ξ³ΟΞ±Ο†Ξ­Ξ±Ο‚"),rs.getString("Ξ ΞµΟΞΉΞ³ΟΞ±Ο†Ξ®"),rs.getString("Ξ£ΞµΞ»Ξ―Ξ΄ΞµΟ‚"),rs.getString("Ξ§ΟΞΏΞ½ΞΏΞ»ΞΏΞ³Ξ―Ξ±"),rs.getString("Ξ•ΞΊΞ΄ΟΟ„Ξ·Ο‚"));
+		Book book = new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης"));
 		rs.close();
 		stmt.close();
 		db.close();
