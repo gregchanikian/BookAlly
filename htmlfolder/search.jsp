@@ -2,17 +2,18 @@
 <%@ page import="bookally.*" %>
 
 <% String title = request.getParameter("search");
+
     BookService bService = new BookService();
 
-    try{
+  try {
     Book book = (Book)bService.findBookbyTitle(title);
-    request.setAttribute("search_book", book );
-    %>
-    <jsp: forward page = "bookinfo.jsp"/>
-    <% }catch(Exception e) {
-        request.setAttribute("message", e.getMessage());
-    %>
-    <jsp: forward pade = "<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1)%>" />
-    <%
-    }
-    %>
+%>
+    <jsp:forward page = "bookinfo.jsp">
+      <jsp:param name="id" value="<%=book.getBookId()%>"/>
+    </jsp:forward>
+
+<%
+  } catch(Exception e) {
+  request.setAttribute("message", e.getMessage());
+  }
+%>
