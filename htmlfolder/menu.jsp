@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
      #menu_page {
     width: 7%;
@@ -86,8 +87,14 @@ a {
 
 #option1{
     position: absolute;
-    left: 2%;
+    left: 0%;
     top: 15%;
+    width: 100%;
+    height: 20%;
+}
+#option1:hover {
+  border: transparent;
+  background-color: #e2c8a98e;
 }
 
 #option2{
@@ -124,30 +131,33 @@ a {
 
 #option1 input {
   border-radius: 12px;
-  background: #e2c8a98e;
-  border: transparent;
+  border: #e2c8a900;
+  color: rgb(27, 15, 0);
+  background: transparent;
   height: 35px;
-  width: 100%;
+  width: 70%;
+  height: 55px;
   position: relative;
   font-size: medium;
 }
-#option1:hover {
+
+#option1 input:hover {
   border: transparent;
 }
-/*#option1 button {
+
+#option1 button { 
   float: right;
   padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
+  background:transparent;
   font-size: 17px;
   border: none;
   cursor: pointer;
+  height: 55px
 }
 
-#option1 button:hover {
-  background: #ccc;
-} */
+#option1 button :hover{
+  background: #f3802111;
+}
 
 </style>
 
@@ -158,7 +168,8 @@ a {
   <div id="menu_catalog"> 
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
       <form action="search.jsp">
-        <input type="text" placeholder="Search a book.." name="search">
+        <input type="text" name="search" placeholder="Search a book.." > 
+        <button type="submit"><i class="fa fa-search"></i></button>
       </form>
       
     </div>
