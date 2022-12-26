@@ -15,5 +15,8 @@
 <%
   } catch(Exception e) {
   request.setAttribute("message", e.getMessage());
+  %>
+    <jsp:forward page = "booknotfound.jsp" />
+  <%
   }
-%>
+  %>
