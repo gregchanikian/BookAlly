@@ -55,7 +55,7 @@ body {
   #divi {
   justify-content: space-evenly;
   }
-  #menu-bar {
+  /*#menu-bar {
     width: 20%;
     height: fit-content;
     position: absolute;
@@ -88,7 +88,7 @@ body {
     margin-right: 12%;
     background-color: #52300c;/*when library button is pressed*/
     /*border: 4px outset rgb(68, 31, 6);/*analoga tin selida pou vriskomaste */
-  }
+  
   
   .btn3{
     margin-top: 2%;
@@ -140,83 +140,34 @@ body {
     left: auto;
   }
 
+ #add_book {
+    height: fit-content;
+    width: fit-content;
 
+    position: absolute; 
+    right: 3%; 
+    bottom: 7%; 
+    
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
 
+    background-color:#421a0edb;
+    color: #cbc5bc;
 
-
-  /* #book_name { 
-    color: #201f1f;
-    font-size: 200%;
-    font-family: 'Arial', Courier,monospace;
-    font-weight:normal;
-    position: relative;
-    align-self: center;
-    top: 4%;
-  } 
-
-  #Category {
-    color: #2e2b2b;
-    font-size: 120%;
-    font-family: 'Arial', Courier,monospace;
-    font-weight:normal;
-    position: relative;
-    bottom: 58%;
-    right: 219%;
+    font-size: 130%;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   }
 
-  #author {
-    color: #2e2b2b;
-    font-size: 120%;
-    font-family: 'Arial', Courier,monospace;
-    font-weight:normal;
-    position: relative;
-    bottom: 120%;
-    right: 136%;
-
+  #add_book:hover{
+    background-color:#cbc5bc;
+    color: #421a0edb;
   }
+  
 
-  #publisher {
-    color: #2e2b2b;
-    font-size: 120%;
-    font-family: 'Arial', Courier,monospace;
-    font-weight:normal;
-    position: relative;
-    bottom: 180%;
-    right: 147%;
 
-  }
 
-  #page {
-    color: #2e2b2b;
-    font-size: 120%;
-    font-family: 'Arial', Courier,monospace;
-    font-weight:normal;
-    position: relative;
-    bottom:238%;
-    right: 327%;
-  }
-  #year{
-    color: #2e2b2b;
-    font-size: 120%;
-    font-family: 'Arial', Courier,monospace;
-    font-weight:normal;
-    position: relative;
-    bottom:295%;
-    right: 210%;
-  }
-
-  #info{
-    color: #2e2b2b;
-    font-size: 100%;
-    font-family: 'Arial', Courier,monospace;
-    font-weight:normal;
-    position: relative;
-    bottom:295%;
-    right: 210%;
-
-  }
-
-*/
   *{
     margin: 0;
     padding: 0;
