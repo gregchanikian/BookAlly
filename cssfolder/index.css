@@ -35,7 +35,7 @@ html {
     background-color: #cbc5bc;
     border-radius: 20px;
 
-    height: 60%;
+    height: 70%;
     overflow: hidden;
     
     /*transition*/
@@ -55,7 +55,7 @@ html {
     width: 35%;
     left: 5%;
     
-
+    overflow-y:auto;
     -webkit-transition: height 1s;
     -moz-transition: height 1s;
     transition:height 1s;
@@ -81,16 +81,14 @@ html {
   }
 
   #register_form {
+    
     display: none;
-    width: 70%;
-    height: 90%;
-    align-self: center;
-    position:relative;
-    left: auto;
+   
   }
 
 
   #register_form.open {
+    
     display: unset;
     width: 70%;
     height: 100%;

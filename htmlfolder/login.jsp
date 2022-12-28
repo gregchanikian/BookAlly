@@ -73,7 +73,7 @@
       
 
       <div id="checkbox">
-          <div style=" float:left;  margin-right: 5%;">
+          <div style=" float:left;  margin-right: 10%;">
           <input type="checkbox" name="c1" value="1 " >
           <label for="βιογραφίες-αυτοβιογραφίες "> βιογραφίες-αυτοβιογραφίες <br>
 
@@ -99,7 +99,7 @@
           </div>
 
 
-          <div style=" float:left; margin-left: 5%;">
+          <div style=" float:left;">
           
           <input type="checkbox" name="c7" value="1" >
           <label for="  Οικονομικά "> Οικονομικά <br>
