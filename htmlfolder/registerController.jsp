@@ -74,6 +74,9 @@ if(!errors) {
         
         User user =  new User(newusername, newpassword, 0, checkbox1, checkbox2 , checkbox3, checkbox4, checkbox5, checkbox6, checkbox7, checkbox8, checkbox9, checkbox10, checkbox11, checkbox12 );
         userDAO.createAccount(user);  
+        User onlineUser = userDAO.authenticate(newusername, newpassword);
+
+        session.setAttribute("authenticated_user", onlineUser);
     %>
 
     <jsp:forward page="wishlist.jsp?count=0&time=1" />
