@@ -85,7 +85,7 @@ List<User> users = UserDao.getUsers();
             }else{
             %>
                 <form id="alert-form">
-                    <h2><font color="#81420e">Η wishlist σου είναι άδεια.Explore new books!</font></h2>
+                    <h2><font color="#81420e">Η wishlist σου είναι άδεια.<a href="bookbrowsing.jsp"  style="font-size: 100%"><font color="#81420e" >Explore new books!</font></a></font></h2>
                 </form>
             <%
             }
