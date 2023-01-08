@@ -144,10 +144,41 @@ public class UserDAO {
 				stmt2.setString(14, user.getCooking());
 				stmt2.setString(15, user.getScifi());
 				
+				
+				sql = "create table "+ user.getUsername() 
+				+ "  (book_id int, counter int AUTO_INCREMENT primary key, recommended boolean not null default false,  FOREIGN KEY (book_id) REFERENCES book_info(book_id,FOREIGN KEY (USERNAME) REFERENCES user(USERNAME));";
+				PreparedStatement stmt3 = con.prepareStatement(sql);
+
+				
 				stmt2.executeUpdate();
 				stmt2.close();
-           		db.close();
+				stmt3.executeUpdate();
+				stmt3.close();
 
+
+				//fills the recommend table with the books that the user sellected
+
+				String [] categories = { user.getBiography(), user.getArt(), user.getThriller(), user.getPsychology(), user.getHistory(), user.getRomance(), user.getEconomy(), user.getPhilosophy(), user.getPoetry(), user.getAdventure(),user.getCooking(),user.getScifi() };
+				String [] categoryNames = { "βιογραφίες-αυτοβιογραφίες", "τέχνη", "Αστυνομικά-Θρίλερ", "Αυτοβελτίωση-Ψυχολογία", "Ιστορία", "Ρομαντικά", "Οικονομικά", "Φιλοσοφία", "Ποίηση", "Περιπέτεια", "Μαγειρική", "Επιστημονικής Φαντασίας"};
+
+				for(int i=0; i < 12;i++) {
+
+					if (!(categories[i] == null)) {
+
+						for(int j=0;j<10;j++){
+
+							sql = "INSERT INTO " + user.getUsername()  + " SELECT Book_id FROM book_info WHERE Κατηγορία = " + categoryNames[j]+ ";";
+							PreparedStatement stmt4 = con.prepareStatement(sql);
+							stmt4.executeUpdate();
+							stmt4.close();
+
+						}
+					}
+				}
+				
+
+
+           		db.close();
 			}
 
   
@@ -163,68 +194,5 @@ public class UserDAO {
 		
 	}//end of register
 
-
-		/*String sql = "INSERT INTO user"
-            + " (USERNAME, PASSWORD, POINTER, BIOGRAPHY, ART, THRILLER, PSYCHOLOGY, HISTORY, ROMANCE, ECONOMY, PHILOSOPHY, POETRY, ADVENTURE, COOKING, SCI_FI ) VALUES (?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-
-		String sql1 = "SELECT * FROM user WHERE username = '"+user.getUsername()+"'";
-        Connection con = null;
-        DB db = new DB();
-
-		try {
-
-		    con = db.getConnection();
-            PreparedStatement stmt1 = con.prepareStatement(sql1);
-
-
-            ResultSet rs = stmt1.executeQuery();
-            if (rs.next()) {
-			    rs.close();
-			    stmt1.close();
-			    db.close();
-			    throw new Exception("Sorry, username has already created an account.");
-			}
-
-			try {
-
-				con = db.getConnection();
-				PreparedStatement stmt = con.prepareStatement(sql);
-				// setting parameters
-				stmt.setString(1, user.getUsername());
-				stmt.setString(2, user.getPassword());
-				stmt.setInt(3,user.getpointer());
-				stmt.setString(4, user.getBiography());
-				stmt.setString(5, user.getArt());
-				stmt.setString(6, user.getThriller());
-				stmt.setString(7, user.getPsychology());
-				stmt.setString(8, user.getHistory());
-				stmt.setString(9, user.getRomance());
-				stmt.setString(10, user.getEconomy());
-				stmt.setString(11, user.getPhilosophy());
-				stmt.setString(12, user.getPoetry());
-				stmt.setString(13, user.getAdventure());
-				stmt.setString(14, user.getCooking());
-				stmt.setString(15, user.getScifi());
-
-				stmt.executeUpdate();
-				stmt.close();
-				db.close();
-
-			} catch (Exception e) {
-				throw new Exception(e.getMessage());
-			}
-		} catch (Exception e) {
-
-				throw new Exception(e.getMessage());
-
-		} finally {
-
-				try {
-					db.close();
-				} catch (Exception e) {
-
-				}
-		}
-	}*/
-
+			
 }
