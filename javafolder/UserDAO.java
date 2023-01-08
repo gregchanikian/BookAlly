@@ -111,7 +111,7 @@ public class UserDAO {
             con = db.getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString( 1, user.getUsername() );
-			
+
 
             ResultSet rs = stmt.executeQuery();
 
@@ -123,7 +123,7 @@ public class UserDAO {
                 throw new Exception("Sorry, username already registered.");
 
             }else{
-                sql = "INSERT INTO  user " 
+                sql = "INSERT INTO  user "
                 + " (USERNAME, PASSWORD, POINTER, BIOGRAPHY, ART, THRILLER, PSYCHOLOGY, HISTORY, ROMANCE, ECONOMY, PHILOSOPHY, POETRY, ADVENTURE, COOKING, SCI_FI ) VALUES (?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
 				PreparedStatement stmt2 = con.prepareStatement(sql);
@@ -143,13 +143,13 @@ public class UserDAO {
 				stmt2.setString(13, user.getAdventure());
 				stmt2.setString(14, user.getCooking());
 				stmt2.setString(15, user.getScifi());
-				
-				
-				sql = "create table "+ user.getUsername() 
-				+ "  (book_id int, counter int AUTO_INCREMENT primary key, recommended boolean not null default false,  FOREIGN KEY (book_id) REFERENCES book_info(book_id,FOREIGN KEY (USERNAME) REFERENCES user(USERNAME));";
+
+
+				sql = "create table "+ user.getUsername()
+				+ "  (book_id int, counter int AUTO_INCREMENT primary key, recommended boolean not null default false,  FOREIGN KEY (book_id) REFERENCES book_info(book_id);";
 				PreparedStatement stmt3 = con.prepareStatement(sql);
 
-				
+
 				stmt2.executeUpdate();
 				stmt2.close();
 				stmt3.executeUpdate();
@@ -175,24 +175,24 @@ public class UserDAO {
 						}
 					}
 				}
-				
+
 
 
            		db.close();
 			}
 
-  
+
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         } finally {
             try {
                 db.close();
             } catch (Exception e) {
-                
+
             }
         }
-		
+
 	}//end of register
 
-			
+
 }
