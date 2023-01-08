@@ -25,9 +25,9 @@ List<User> users = UserDao.getUsers();
 		User userObj = (User)session.getAttribute("authenticated_user");
     
         if (userObj == null) {
-
+            %>
+           
             request.setAttribute("message", " You can not have a wishlist without an account.  Please login.");
-
         %>
         <jsp:forward page="login.jsp" />
         <% 
@@ -51,22 +51,23 @@ List<User> users = UserDao.getUsers();
                 int bookPosition = 0;
                 int i = 0;
                 if( timer == 1 || timer == 2) {
-                    for( i = counter;i < counter + 8; i++ ){
-                        bookPosition += 1;
+                    for(i = counter;i < counter + 8; i++){
+                            bookPosition += 1;
                         if(i < books.size()){
-                    %>
+                        %>
                             <a href="bookinfo.jsp?id=<%=books.get(i).getBookId() %>"><img src="../images/<%=books.get(i).getBookId() %>.jpg" id="book<%=bookPosition%>"></a>
                         <%}
-                    }
-                    if((books.size() - i) > 0){
-                    %>
-                        <a id="a2" href="wishlist.jsp?count=<%=i%>&time=2" data-toggle="tooltip" title="Επόμενο">&#8250;</a>
-                    <%}
-                    if(timer == 2){
-                    %>
-                        <a id="a1" href="wishlist.jsp?count=<%=i%>&time=3" data-toggle="tooltip" title="Προηγούμενο" >&#8249;</a>
-                    <%
-                    }
+                        }
+                        if((books.size() - i) > 0){
+                        %>
+                            <a id="a2" href="wishlist.jsp?count=<%=i%>&time=2" data-toggle="tooltip" title="Επόμενο">&#8250;</a>
+                        <%}
+                        if(timer == 2){
+                        %>
+                            <a id="a1" href="wishlist.jsp?count=<%=i%>&time=3" data-toggle="tooltip" title="Προηγούμενο" >&#8249;</a>
+                        <%  
+                        }
+                        
                 }else if(timer == 3){
                     for( i = counter - 16 ;i < counter - 8; i++ ){
                         bookPosition += 1;
@@ -91,6 +92,10 @@ List<User> users = UserDao.getUsers();
             }
             %>
         </div>
+        <form id="logged-form">
+            <h4><font color="#81420e"> Logged in as <%=userObj.getUsername()%></font></h4>
+            <a href="logout.jsp" style="margin-bottom: 2%;"><img src="../images/logout-icon.png"></a>
+        </form>
             
     </body>  
 </html>

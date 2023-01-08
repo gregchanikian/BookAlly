@@ -245,3 +245,17 @@ body {
   border-radius: 20px;
   height: 10%;
 }
+
+#logged-form {
+  width: 11%;
+  align-self: center;
+  right: 2%; 
+  top: 2%; 
+  position: absolute;  
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #F5E9DB;
+  border-radius: 20px;
+  height: 15%;
+}
