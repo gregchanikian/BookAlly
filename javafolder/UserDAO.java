@@ -146,7 +146,8 @@ public class UserDAO {
 
 
 				sql = "create table "+ user.getUsername()
-				+ "  (book_id int, counter int AUTO_INCREMENT primary key, recommended boolean not null default false,  FOREIGN KEY (book_id) REFERENCES book_info(book_id);";
+				+ "  (book_id int, counter int AUTO_INCREMENT primary key, recommended boolean not null default false,  FOREIGN KEY (book_id) REFERENCES book_info(book_id));";
+
 				PreparedStatement stmt3 = con.prepareStatement(sql);
 
 
@@ -159,20 +160,34 @@ public class UserDAO {
 				//fills the recommend table with the books that the user sellected
 
 				String [] categories = { user.getBiography(), user.getArt(), user.getThriller(), user.getPsychology(), user.getHistory(), user.getRomance(), user.getEconomy(), user.getPhilosophy(), user.getPoetry(), user.getAdventure(),user.getCooking(),user.getScifi() };
-				String [] categoryNames = { "βιογραφίες-αυτοβιογραφίες", "τέχνη", "Αστυνομικά-Θρίλερ", "Αυτοβελτίωση-Ψυχολογία", "Ιστορία", "Ρομαντικά", "Οικονομικά", "Φιλοσοφία", "Ποίηση", "Περιπέτεια", "Μαγειρική", "Επιστημονικής Φαντασίας"};
+
+
+				String categoryNames[] = new String[11];
+				categoryNames[0]= "Biography-autobiography";
+				categoryNames[1]= "Art";
+				categoryNames[2]= "Crime-Thriller";
+				categoryNames[3]= "Self-Help/Psychology";
+				categoryNames[4]= "History";
+				categoryNames[5]= "Romance";
+				categoryNames[6]= "Economics";
+				categoryNames[7]= "Philosophy";
+				categoryNames[8]= "Poetry";
+				categoryNames[9]= "Adventure";
+				categoryNames[10]= "Cooking";
+				categoryNames[11]= "Science fiction";
 
 				for(int i=0; i < 12;i++) {
 
 					if (!(categories[i] == null)) {
 
-						for(int j=0;j<10;j++){
-
-							sql = "INSERT INTO " + user.getUsername()  + " SELECT Book_id FROM book_info WHERE Κατηγορία = " + categoryNames[j]+ ";";
+							sql = "INSERT INTO " + user.getUsername()  + "(book_id) SELECT Book_id FROM book_info WHERE Category=?";
 							PreparedStatement stmt4 = con.prepareStatement(sql);
+							stmt4.setString(1, categoryNames[i]);
+
 							stmt4.executeUpdate();
 							stmt4.close();
 
-						}
+
 					}
 				}
 

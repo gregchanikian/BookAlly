@@ -1,4 +1,4 @@
-
+package bookally;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,16 +8,15 @@ import java.util.List;
 public class Recommendation {
 
 
-    public void createRecommendation(User user) throws Exception {
+    public Book randomRecommendation(User user) throws Exception {
 
-        
-    }
+        String sql = "SELECT book_id FROM " + user.getUsername() + " ORDER BY RAND() LIMIT 1";
+        Connection con = null;
+        DB db = new DB();
 
+        try{
 
-
-    public Book randomRecommendation() throws Exception {
-
-
+        }
 
         return null;
 
