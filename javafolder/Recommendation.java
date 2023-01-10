@@ -14,9 +14,7 @@ public class Recommendation {
         Connection con = null;
         DB db = new DB();
 
-        try{
-
-        }
+        
 
         return null;
 

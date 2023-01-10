@@ -15,7 +15,9 @@
   <main id="mainHolder" method="post">
 
     
-  
+    <% if(request.getAttribute("message") != null) { %>		
+      <div class="alert alert-danger text-center" role="alert"><%=(String)request.getAttribute("message") %></div>
+    <% } %>  
 
 
 

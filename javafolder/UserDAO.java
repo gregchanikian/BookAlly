@@ -146,7 +146,7 @@ public class UserDAO {
 
 
 				sql = "create table "+ user.getUsername()
-				+ "  (book_id int, counter int AUTO_INCREMENT primary key, recommended boolean not null default false,  FOREIGN KEY (book_id) REFERENCES book_info(book_id));";
+				+ "  (book_id int, recommended boolean not null default false,  FOREIGN KEY (book_id) REFERENCES book_info(book_id));";
 
 				PreparedStatement stmt3 = con.prepareStatement(sql);
 
@@ -162,11 +162,11 @@ public class UserDAO {
 				String [] categories = { user.getBiography(), user.getArt(), user.getThriller(), user.getPsychology(), user.getHistory(), user.getRomance(), user.getEconomy(), user.getPhilosophy(), user.getPoetry(), user.getAdventure(),user.getCooking(),user.getScifi() };
 
 
-				String categoryNames[] = new String[11];
+				String categoryNames[] = new String[12];
 				categoryNames[0]= "Biography-autobiography";
 				categoryNames[1]= "Art";
 				categoryNames[2]= "Crime-Thriller";
-				categoryNames[3]= "Self-Help/Psychology";
+				categoryNames[3]= "Psychology";
 				categoryNames[4]= "History";
 				categoryNames[5]= "Romance";
 				categoryNames[6]= "Economics";
@@ -176,21 +176,26 @@ public class UserDAO {
 				categoryNames[10]= "Cooking";
 				categoryNames[11]= "Science fiction";
 
+				
+
 				for(int i=0; i < 12;i++) {
 
 					if (!(categories[i] == null)) {
 
-							sql = "INSERT INTO " + user.getUsername()  + "(book_id) SELECT Book_id FROM book_info WHERE Category=?";
+							sql = "INSERT INTO " + user.getUsername()  + "(book_id) SELECT Book_id FROM book_info WHERE Category = ?;";
 							PreparedStatement stmt4 = con.prepareStatement(sql);
 							stmt4.setString(1, categoryNames[i]);
 
 							stmt4.executeUpdate();
-							stmt4.close();
-
+							stmt4.close();		
 
 					}
 				}
+				sql = "ALTER TABLE  " + user.getUsername()  + " ADD COLUMN counter int AUTO_INCREMENT primary key ;";
 
+				PreparedStatement stmt5 = con.prepareStatement(sql);
+				stmt5.executeUpdate();
+				stmt5.close();		
 
 
            		db.close();
