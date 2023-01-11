@@ -21,6 +21,7 @@ id = recommendation.randomRecommendation(userObj.getUsername());
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BookAlly</title>
+  <%@ include file="header.jsp" %>
   <link rel="stylesheet" href="../cssfolder/bookbrowsing.css">
   <link rel="stylesheet" href="../cssfolder/menu.css">
 </head>
