@@ -3,9 +3,10 @@
 
 
 <%
-    int id;
-    UserDAO UserDao  = new UserDAO();
-		User userObj = (User)session.getAttribute("authenticated_user");
+
+  int id;
+  UserDAO UserDao  = new UserDAO();
+	User userObj = (User)session.getAttribute("authenticated_user");
     
     
 Recommendation recommendation = new Recommendation();
@@ -39,13 +40,16 @@ id = recommendation.randomRecommendation(userObj.getUsername());
 
   <img  id="book" src="../images/<%=id%>.jpg">
   
-  <a href="" id="discard">
+  <a href="bookbrowsing.jsp" id="discard">
     <img src="../images/discardArrow.png" alt="discardArrow" />
   </a>
 
 
-  <a href="" id="save">
+  <a href="addtowishlist.jsp?id=<%=id %>" id="save" >
     <img src="../images/saveArrow.png" alt="saveArrow"  />
+  </a>
+
+    
   </a>
 </body>
 

@@ -46,7 +46,7 @@ public class Recommendation {
             db.close();
             return id; 
 
-            
+
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         } finally {
@@ -63,8 +63,8 @@ public class Recommendation {
 
     public void addToWishlist(int id, String username) throws Exception {
 
-        String sql = " INSERT INTO wishlist "
-        + " (id, username) ";
+        String sql = "insert into wishlist (book_id, USERNAME) VALUES (?, ?);";
+        
         Connection con = null;
         DB db = new DB();
 		try {
@@ -74,12 +74,10 @@ public class Recommendation {
             stmt.setInt( 1, id );
             stmt.setString( 2, username );
 
-            
+            stmt.executeUpdate();
             stmt.close();
             db.close();
 
-
-            
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         } finally {
