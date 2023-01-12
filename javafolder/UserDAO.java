@@ -176,7 +176,7 @@ public class UserDAO {
 				categoryNames[10]= "Cooking";
 				categoryNames[11]= "Science fiction";
 
-				
+
 
 				for(int i=0; i < 12;i++) {
 
@@ -187,7 +187,7 @@ public class UserDAO {
 							stmt4.setString(1, categoryNames[i]);
 
 							stmt4.executeUpdate();
-							stmt4.close();		
+							stmt4.close();
 
 					}
 				}
@@ -195,8 +195,14 @@ public class UserDAO {
 
 				PreparedStatement stmt5 = con.prepareStatement(sql);
 				stmt5.executeUpdate();
-				stmt5.close();		
+				stmt5.close();
 
+
+				sql = "INSERT INTO wishlist(book_id, USERNAME) VALUES (0,'" + user.getUsername() +"');";
+
+				PreparedStatement stmt6 = con.prepareStatement(sql);
+				stmt6.executeUpdate();
+				stmt6.close();
 
            		db.close();
 			}

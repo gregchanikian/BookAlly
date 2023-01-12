@@ -18,7 +18,7 @@ List<User> users = UserDao.getUsers();
     <body>
 
         <img  src="../images/BackgroundImage.png" id="backgroundImage">
-        <%@ include file="menu.jsp" %>
+       
         <h1 id="HeadTitle">BookAlly</h1>
 
         <%
@@ -41,10 +41,10 @@ List<User> users = UserDao.getUsers();
         int timer = Integer.parseInt(time);
         %>
 
+        <%@ include file="menu.jsp" %>
 
-        
         <div id="div2">
-            <%if(books != null){
+            <%if(books.size() != 0){
             %>
                 <hr id="line">
                 <%
@@ -53,7 +53,7 @@ List<User> users = UserDao.getUsers();
                 if( timer == 1 || timer == 2) {
                     for(i = counter;i < counter + 8; i++){
                             bookPosition += 1;
-                        if(i < books.size()){
+                        if(i < books.size() ){
                         %>
                             <a href="bookinfo.jsp?id=<%=books.get(i).getBookId() %>"><img src="../images/<%=books.get(i).getBookId() %>.jpg" id="book<%=bookPosition%>"></a>
                         <%}
@@ -86,16 +86,12 @@ List<User> users = UserDao.getUsers();
             }else{
             %>
                 <form id="alert-form">
-                    <h2><font color="#81420e">Η wishlist σου είναι άδεια.<a href="bookbrowsing.jsp"  style="font-size: 100%"><font color="#81420e" >Explore new books!</font></a></font></h2>
+                    <h2><font color="#81420e">Η wishlist σου είναι άδεια.<a href="bookbrowsing.jsp"  style="font-size: 100%"><font color="#4b1803" ><u>Explore new books!</u></font></a></font></h2>
                 </form>
             <%
             }
             %>
         </div>
-        <form id="logged-form">
-            <h4><font color="#81420e"> Logged in as <%=userObj.getUsername()%></font></h4>
-            <a href="logout.jsp" style="margin-bottom: 2%;"><img src="../images/logout-icon.png"></a>
-        </form>
             
     </body>  
 </html>

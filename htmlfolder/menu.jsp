@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="bookally.*" %>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
      #menu_page {
@@ -85,6 +87,14 @@ a {
   color: #503524;
 }
 
+#option0{
+    position: absolute;
+    left: 0%;
+    top: 60%;
+    width: 100%;
+    height: 20%;
+}
+
 #option1{
     position: absolute;
     left: 0%;
@@ -124,8 +134,8 @@ a {
 
 #logout-div{
     position: absolute;
-    top: 80%;
-    left: 38%;
+    top: 78%;
+    left:8%;
 }
 
 
@@ -161,24 +171,29 @@ a {
 
 </style>
 
-
+<body>
+  
 <main id="menu_page">
 
-       
-  <div id="menu_catalog"> 
+  <div id="menu_catalog">
+
+
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
-      <form action="search.jsp">
-        <input type="text" name="search" placeholder="Search a book.." > 
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-      
+        <form action="search.jsp">
+            <input type="text" name="search" placeholder="Search a book.." > 
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
+
     <br>
+
     <div id="option2" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("bookbrowsing.jsp") ? "active" : ""  %>" >
         <br>
         <a id="menu-link" href="bookbrowsing.jsp"> Explore new books</a>
     </div>
+
     <br>
+
     <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp?count=0&time=1") ? "active" : ""  %>" >   
         <br>
         <a id="menu-link" href="wishlist.jsp?count=0&time=1"> Visit your wishlist</a>
@@ -190,7 +205,7 @@ a {
     <br>
     <br>
     <div id="logout-div" >
-        <a id="menu-link" href="logout.jsp">Logout</a>
+        <a href="logout.jsp"><img width=100%; src="../images/LogOut.png"></a>
     </div>
 
   </div>
@@ -202,7 +217,7 @@ a {
         <p style="font-size: x-large; color:81420e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; float:right; margin-left: 42%; margin-top: -34%;">  Menu</p>
     </div>   
 </a>
-
+</body>
 
 <script>
 var menu_page = document.getElementById("menu_page");
