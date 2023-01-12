@@ -170,6 +170,10 @@ a {
   background: #f3802111;
 }
 
+#LOImage:hover{
+  filter: brightness(40%);
+}
+
 </style>
 
 <body>
@@ -182,7 +186,7 @@ a {
   <div id="menu_catalog">
 
     <div id="option0">
-      <h4 style="color:#79553e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; "><i> Logged in as <%=userObjM.getUsername()%></i></h4>
+      <h4 style="color:#79553e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; opacity:0.5; "><i> Logged in as <%=userObjM.getUsername()%></i></h4>
     </div>
 
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
@@ -203,7 +207,7 @@ a {
     </div>
     
     <div id="logout-div" >
-        <a href="logout.jsp"><img width=100%; src="../images/LogOut.png"></a>
+        <a href="logout.jsp"><img id="LOImage" width=100%; src="../images/LogOut.png"></a>
     </div>
 
   </div>

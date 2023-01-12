@@ -18,7 +18,7 @@
 	<img  src="../images/BackgroundImage.png" id="backgroundImage">
 	<h1 id="HeadTitle">BookAlly</h1>
 	<form id="alert-form">
-		<h2><font color="#81420e">Πραγματοποιήθηκε έξοδος με επιτυχία.</font></h2>
+		<center><h2><font color="#825e41">Πραγματοποιήθηκε έξοδος με επιτυχία.  </font><a href="login.jsp"><img style="height:25%; width:5%;" src="../images/LogIn.png"></a></h2></center>
 	</form>
 	
 </body>
