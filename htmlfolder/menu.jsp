@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="bookally.*" %>
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
      #menu_page {
@@ -90,15 +91,15 @@ a {
 #option0{
     position: absolute;
     left: 0%;
-    top: 60%;
+    top: 8%;
     width: 100%;
-    height: 20%;
+    height: 12%;
 }
 
 #option1{
     position: absolute;
     left: 0%;
-    top: 15%;
+    top: 20%;
     width: 100%;
     height: 20%;
 }
@@ -110,7 +111,7 @@ a {
 #option2{
     position: absolute;
     left: 0%;
-    top: 30%;
+    top: 35%;
     width:100%;
     height: 20%;
     background-color: #F5E9DB;
@@ -122,7 +123,7 @@ a {
 #option3{
     position: absolute;
     left: 0%;
-    top: 45%;
+    top: 50%;
     height: 15%;
     width:100%;
     background-color: #F5E9DB;
@@ -172,11 +173,17 @@ a {
 </style>
 
 <body>
-  
+  <%
+  User userObjM = (User)session.getAttribute("authenticated_user");
+  %>
+
 <main id="menu_page">
 
   <div id="menu_catalog">
 
+    <div id="option0">
+      <h4 style="color:#79553e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; "><i> Logged in as <%=userObjM.getUsername()%></i></h4>
+    </div>
 
     <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
         <form action="search.jsp">
@@ -185,25 +192,16 @@ a {
         </form>
     </div>
 
-    <br>
-
     <div id="option2" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("bookbrowsing.jsp") ? "active" : ""  %>" >
         <br>
         <a id="menu-link" href="bookbrowsing.jsp"> Explore new books</a>
     </div>
 
-    <br>
-
     <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp?count=0&time=1") ? "active" : ""  %>" >   
         <br>
         <a id="menu-link" href="wishlist.jsp?count=0&time=1"> Visit your wishlist</a>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
     <div id="logout-div" >
         <a href="logout.jsp"><img width=100%; src="../images/LogOut.png"></a>
     </div>
