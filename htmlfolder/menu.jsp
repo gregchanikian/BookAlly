@@ -33,8 +33,6 @@
     height: 58%;
     width: 13%;
     
-    
-
     -webkit-transition: height 0.8s;
     -moz-transition: height 0.8s;
     transition:height 0.8s;
@@ -181,44 +179,42 @@ a {
   User userObjM = (User)session.getAttribute("authenticated_user");
   %>
 
-<main id="menu_page">
+    <main id="menu_page">
+        <div id="menu_catalog">
+            <div id="option0">
+              <h4 style="color:#79553e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; opacity:0.5; "><i> Logged in as <%=userObjM.getUsername()%></i></h4>
+            </div>
 
-  <div id="menu_catalog">
+            <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
+                <form action="search.jsp">
+                    <input type="text" name="search" placeholder="Search a book.." > 
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
 
-    <div id="option0">
-      <h4 style="color:#79553e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; opacity:0.5; "><i> Logged in as <%=userObjM.getUsername()%></i></h4>
-    </div>
+            <div id="option2" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("bookbrowsing.jsp") ? "active" : ""  %>" >
+                <br>
+                <a id="menu-link" href="bookbrowsing.jsp"> Explore new books</a>
+            </div>
 
-    <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
-        <form action="search.jsp">
-            <input type="text" name="search" placeholder="Search a book.." > 
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
+            <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp?count=0&time=1") ? "active" : ""  %>" >   
+                <br>
+                <a id="menu-link" href="wishlist.jsp?count=0&time=1"> Visit your wishlist</a>
+            </div>
+            
+            <div id="logout-div" >
+                <a href="logout.jsp"><img id="LOImage" width=100%; src="../images/LogOut.png"></a>
+            </div>
+        </div> 
+    </main>
 
-    <div id="option2" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("bookbrowsing.jsp") ? "active" : ""  %>" >
-        <br>
-        <a id="menu-link" href="bookbrowsing.jsp"> Explore new books</a>
-    </div>
+    <a id="menu_button">
+        <div style=" float:left;  margin-right: 10%; margin-left: 10%; margin-top: 5% ;">
+            <img src="../images/menuIcon.png" alt="">
+            <p style="font-size: x-large; color:81420e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; float:right; margin-left: 42%; margin-top: -34%;">  Menu</p>
+        </div>   
+    </a>
 
-    <div id="option3" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("wishlist.jsp?count=0&time=1") ? "active" : ""  %>" >   
-        <br>
-        <a id="menu-link" href="wishlist.jsp?count=0&time=1"> Visit your wishlist</a>
-    </div>
-    
-    <div id="logout-div" >
-        <a href="logout.jsp"><img id="LOImage" width=100%; src="../images/LogOut.png"></a>
-    </div>
-
-  </div>
-   
-</main>
-<a id="menu_button">
-    <div style=" float:left;  margin-right: 10%; margin-left: 10%; margin-top: 5% ;">
-        <img src="../images/menuIcon.png" alt="">
-        <p style="font-size: x-large; color:81420e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; float:right; margin-left: 42%; margin-top: -34%;">  Menu</p>
-    </div>   
-</a>
 </body>
 
 <script>
@@ -248,4 +244,3 @@ button.onclick = function(){
 
 
 </script>
-
