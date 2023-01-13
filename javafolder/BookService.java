@@ -25,7 +25,7 @@ public class BookService {
 
 		            while (rs.next()) {
 
-						 books.add(new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης")));
+						 books.add(new Book( rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getInt("book_id"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½")));
 		            }
 
 		            rs.close();
@@ -71,7 +71,7 @@ public class BookService {
 				return null;
 			}
 
-			Book book = new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης"));
+			Book book = new Book( rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getInt("book_id"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"));
 			rs.close();
 			stmt.close();
 			db.close();
@@ -120,7 +120,7 @@ public List<Book> searchBook(String username) throws Exception{
 				while (rs.next()) {
 
 
- 					books.add(new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης")));
+ 					books.add(new Book( rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getInt("book_id"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½")));
  				}
 
 				rs.close();
@@ -146,7 +146,7 @@ public List<Book> searchBook(String username) throws Exception{
 
 public Book findBookbyTitle(String title) throws Exception {
 
-	String sql = "SELECT * FROM book_info WHERE Τίτλος =?";
+	String sql = "SELECT * FROM book_info WHERE οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ =?";
 	Connection con = null;
 	DB db = new DB();
 
@@ -166,7 +166,7 @@ public Book findBookbyTitle(String title) throws Exception {
 			return null;
 		}
 
-		Book book = new Book( rs.getString("Κατηγορία"),rs.getInt("book_id"),rs.getString("Τίτλος"),rs.getString("Συγγραφέας"),rs.getString("Περιγραφή"),rs.getString("Σελίδες"),rs.getString("Χρονολογία"),rs.getString("Εκδότης"));
+		Book book = new Book( rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getInt("book_id"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"),rs.getString("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½"));
 		rs.close();
 		stmt.close();
 		db.close();
@@ -184,8 +184,46 @@ public Book findBookbyTitle(String title) throws Exception {
 			db.close();
 		} catch (Exception e) {
 
+		}
 	}
 }
+
+public Boolean BookInWishlist(String id, String username) throws Exception {
+	String sql = "SELECT FROM wishlist WHERE(book_id=? AND USERNAME=?";
+	Connection con = null;
+			DB db = new DB();
+
+			try {
+
+				con = db.getConnection();
+				PreparedStatement stmt = con.prepareStatement(sql);
+				stmt.setString(1,id);
+				stmt.setString(2,username);
+				
+				ResultSet rs = stmt.executeQuery();
+
+				if (rs.next()) {
+
+					rs.close();
+					stmt.close();
+					db.close();
+					return true;
+				}else{
+					return false;
+				}
+			} catch (Exception e) {
+
+				throw new Exception(e.getMessage());
+
+			} finally {
+
+				try {
+						db.close();
+				} catch (Exception e) {
+
+				}
+
+			}
 
 
 }

@@ -72,8 +72,14 @@
             </form>
            
           </main>
+          
+          <%BookService existsB = new BookService();
+          
+      if( existsB.BookInWishlist(asked_book.getBookId(),userObj.getUsername())== true){
+        <form action="addtowishlist.jsp?id=<%=asked_book.getBookId()%> ?type=1 ">
           <button  id="add_book" > + Add this book to your wishlist</button>
-      
+        </form> 
+      }
     </body>
     
     </html>
