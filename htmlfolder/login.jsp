@@ -130,7 +130,7 @@
       <button id="register">Register</button>
     </form>
     <button  id="create_account" >Create Account</button>
-      
+    
     <script src="index.js"></script>
 
 
