@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="bookally.*" %>
 
-
+<meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
      #menu_page {
@@ -182,7 +182,7 @@ a {
     <main id="menu_page">
         <div id="menu_catalog">
             <div id="option0">
-              <h4 style="color:#79553e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; opacity:0.5; "><i> Logged in as <%=userObjM.getUsername()%></i></h4>
+              <h5 style="color:#79553e; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; opacity:0.5; "><i> Logged in as <%=userObjM.getUsername()%></i></h5>
             </div>
 
             <div id="option1" class="<%=request.getRequestURI().substring(request.getRequestURI().lastIndexOf("/") + 1).equals("search.jsp") ? "active" : ""  %>" >
@@ -203,7 +203,7 @@ a {
             </div>
             
             <div id="logout-div" >
-                <a href="logout.jsp"><img id="LOImage" width=100%; src="../images/LogOut.png"></a>
+                <a href="logout.jsp" onClick="cl();"><img id="LOImage" width=100%; src="../images/LogOut.png"></a>
             </div>
         </div> 
     </main>
@@ -241,6 +241,5 @@ button.onclick = function(){
         
       }
 }
-
 
 </script>

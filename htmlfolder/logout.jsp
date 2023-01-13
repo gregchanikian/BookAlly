@@ -6,7 +6,7 @@
 	<head>
 	<%@ include file="header.jsp" %>
 	
-	<meta http-equiv="refresh" content="10;url=login.jsp" />
+	<meta http-equiv="refresh" content="5;url=login.jsp" />
 		
 	<meta name="description" content="log out page">
 	<meta name="author" content="t8200067@aueb.gr">
@@ -23,3 +23,12 @@
 	
 </body>
 </html>
+
+
+<script>
+	function preventBack(){
+		window.history.forward();
+	}
+	setTimeout("preventBack()", 0);
+	window.onunload=function(){null};
+</script>
