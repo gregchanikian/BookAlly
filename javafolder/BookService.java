@@ -191,7 +191,7 @@ public Book findBookbyTitle(String title) throws Exception {
 
 }
 public Boolean BookInWishlist(int id, String username) throws Exception {
-	String sql = "SELECT FROM wishlist WHERE(book_id=? AND USERNAME=?";
+	String sql = "SELECT * FROM wishlist WHERE(book_id=? AND USERNAME=?)";
 	Connection con = null;
 			DB db = new DB();
 
