@@ -12,13 +12,14 @@ List<User> users = UserDao.getUsers();
 <html>
     <head>
         <%@ include file="header.jsp" %>
+        <meta charset="UTF-8">
         <title>Wishlist</title>
         <link rel="stylesheet" href="../cssfolder/wishlist.css">
     </head>
     <body>
-
+        
         <img  src="../images/BackgroundImage.png" id="backgroundImage">
-       
+
         <h1 id="HeadTitle">BookAlly</h1>
 
         <%
@@ -26,8 +27,7 @@ List<User> users = UserDao.getUsers();
     
         if (userObj == null) {
             %>
-           
-            request.setAttribute("message", " You can not have a wishlist without an account.  Please login.");
+            request.setAttribute("message", " You can not have a wishlist without an account.  Please login. ");
         %>
         <jsp:forward page="login.jsp" />
         <% 
@@ -92,6 +92,6 @@ List<User> users = UserDao.getUsers();
             }
             %>
         </div>
-            
+     
     </body>  
 </html>

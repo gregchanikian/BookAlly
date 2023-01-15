@@ -20,10 +20,13 @@
 	<form id="alert-form">
 		<center><h2><font color="#825e41">Πραγματοποιήθηκε έξοδος με επιτυχία.  </font><a href="login.jsp"><img style="height:25%; width:6%;" src="../images/LogIn.png"></a></h2></center>
 	</form>
-	<%request.setAttribute("authenticated_user",null);%>
+	<%
+	request.setAttribute("authenticated_user",null);
+	session.setAttribute("authenticated_user", null);
+	%>
 </body>
+	
 </html>
-
 
 <script>
 	function preventBack(){
