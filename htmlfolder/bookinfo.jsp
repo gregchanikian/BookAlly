@@ -3,6 +3,7 @@
 
 <html lang="en">
     <head>
+      <meta charset="UTF-8">
       <%@ include file="header.jsp" %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BookInfo</title>
@@ -75,11 +76,13 @@
           
           <%BookService existsB = new BookService();
           
-      if( existsB.BookInWishlist(asked_book.getBookId(),userObj.getUsername())== true){
-        <form action="addtowishlist.jsp?id=<%=asked_book.getBookId()%> ?type=1 ">
+      if( existsB.BookInWishlist(asked_book.getBookId(),userObj.getUsername())== true){ 
+        %>
+        <form action="addtowishlist.jsp?id=<%=asked_book.getBookId()%> ">
           <button  id="add_book" > + Add this book to your wishlist</button>
         </form> 
-      }
+        <%
+      } %>
     </body>
     
     </html>
