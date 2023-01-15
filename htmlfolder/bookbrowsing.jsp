@@ -37,8 +37,19 @@ id = recommendation.randomRecommendation(userObj.getUsername());
   
   <h1 id="title">BookAlly</h1>
   
+<%
+if (id == 0){
+%>
+
+<form id="alert-form">
+  <h2> Ωπ! Φαίνεται πως τελείωσαν οι προτάσεις μας. Ευχαριστούμε που χρησιμοποιήσατε την εφαρμογή μας!</h2>
+</form>
 
 
+
+<%
+}else{
+%>
   <img  id="book" src="../images/<%=id%>.jpg">
   
   <a href="bookbrowsing.jsp" id="discard">
@@ -50,8 +61,8 @@ id = recommendation.randomRecommendation(userObj.getUsername());
     <img src="../images/saveArrow.png" alt="saveArrow"  />
   </a>
 
-    
-  </a>
+<%}%>  
+ 
 </body>
 
 </html>

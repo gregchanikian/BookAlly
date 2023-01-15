@@ -59,3 +59,17 @@ html {
   vertical-align: middle;
   object-fit: cover;
 }
+
+#alert-form {
+  margin-top:10%;
+  width: 60%;
+  align-self: center;
+  left: auto;  
+  position: absolute;  
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #F5E9DB;
+  border-radius: 20px;
+  height: 10%;
+}
