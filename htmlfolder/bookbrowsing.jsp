@@ -58,7 +58,7 @@ if (id == 0){
   </a>
 
 
-  <a href="addtowishlist.jsp?id=<%=id %>" id="save" >
+  <a href="addtowishlist.jsp?id=<%=id %>&type=browsing" id="save" >
     <img src="../images/saveArrow.png" alt="saveArrow"  />
   </a>
 

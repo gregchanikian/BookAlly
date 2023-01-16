@@ -16,7 +16,7 @@
 
     if( types.equals("search")){
     %>  
-    <jsp:forward page="book_info.jsp" />
+    <jsp:forward page="bookinfo.jsp" />
     <% }%>
 
     <jsp:forward page="bookbrowsing.jsp" />
