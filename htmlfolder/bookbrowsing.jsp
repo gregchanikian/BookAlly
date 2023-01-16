@@ -8,10 +8,15 @@
   UserDAO UserDao  = new UserDAO();
 	User userObj = (User)session.getAttribute("authenticated_user");
     
-    
-Recommendation recommendation = new Recommendation();
-id = recommendation.randomRecommendation(userObj.getUsername());
+    try{
+      Recommendation recommendation = new Recommendation();
+      id = recommendation.randomRecommendation(userObj.getUsername());
+    } catch (Exception e) {
+%>
+<jsp:forward page="login.jsp" />
 
+<%
+    }
 %>  
 
 <!DOCTYPE html>
