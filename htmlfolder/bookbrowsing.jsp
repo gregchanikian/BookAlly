@@ -50,7 +50,8 @@ if (id == 0){
 <%
 }else{
 %>
-  <img  id="book" src="../images/<%=id%>.jpg">
+
+<a href="bookinfo.jsp?id=<%=id %>" id="link"><img src="../images/<%=id%>.jpg"  id="book"></a>
   
   <a href="bookbrowsing.jsp" id="discard">
     <img src="../images/discardArrow.png" alt="discardArrow" />
