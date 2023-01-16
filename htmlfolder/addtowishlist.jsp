@@ -9,5 +9,9 @@
     Recommendation recommendation = new Recommendation();
 
     recommendation.addToWishlist(id, userObj.getUsername());
+
+    
+    
     %>  
+
     <jsp:forward page="bookbrowsing.jsp" />
