@@ -81,7 +81,7 @@
          
 
         
-        <li class="active"><a href="addtowishlist.jsp?id=<%=asked_book.getBookId()%>" id="add_book" > + Add this book to your wishlist</a></li>
+        <li class="active"><a href="addtowishlist.jsp?id=<%=asked_book.getBookId()%> &type=search" id="add_book" > + Add this book to your wishlist</a></li>
     
           
 
