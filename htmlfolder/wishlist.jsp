@@ -55,7 +55,7 @@ List<User> users = UserDao.getUsers();
                             bookPosition += 1;
                         if(i < books.size() ){
                         %>
-                            <a href="bookinfo.jsp?id=<%=books.get(i).getBookId() %>"><img src="../images/<%=books.get(i).getBookId() %>.jpg" id="book<%=bookPosition%>"></a>
+                            <a href="bookinfo.jsp?id=<%=books.get(i).getBookId() %>" data-toggle="tooltip" title="Πληροφορίες βιβλίου"><img src="../images/<%=books.get(i).getBookId() %>.jpg" id="book<%=bookPosition%>"></a>
                         <%}
                         }
                         if((books.size() - i) > 0){
