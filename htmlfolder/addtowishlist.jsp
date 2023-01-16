@@ -4,6 +4,10 @@
     <%
     String idS = request.getParameter("id");
     int id = Integer.parseInt(idS);
+
+    String typeString = request.getParameter("type");
+    int type = Integer.parseInt(typeString);
+
     UserDAO UserDao  = new UserDAO();
     User userObj = (User)session.getAttribute("authenticated_user");
     Recommendation recommendation = new Recommendation();
