@@ -8,16 +8,18 @@
   UserDAO UserDao  = new UserDAO();
 	User userObj = (User)session.getAttribute("authenticated_user");
     
-    try{
+      if (userObj == null) {
+          %>
+          request.setAttribute("message", " You can not have a wishlist without an account.  Please login. ");
+      %>
+      <jsp:forward page="login.jsp" />
+      <% 
+      }
+
       Recommendation recommendation = new Recommendation();
       id = recommendation.randomRecommendation(userObj.getUsername());
-    } catch (Exception e) {
-%>
-<jsp:forward page="login.jsp" />
-
-<%
-    }
-%>  
+      %>
+ 
 
 <!DOCTYPE html>
 <html lang="en">
