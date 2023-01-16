@@ -78,15 +78,18 @@
           
       if( existsB.BookInWishlist(asked_book.getBookId(),userObj.getUsername())== false){ 
         %>
-        
+         
 
         
-  <a href="addtowishlist.jsp?id=<%=asked_book.getBookId()%>" id="add_book" > + Add this book to your wishlist
+        <li class="active"><a href="addtowishlist.jsp?id=<%=asked_book.getBookId()%>" id="add_book" > + Add this book to your wishlist</a></li>
     
-  </a>
+          
 
         <%
-      } %>
+      }else{%>
+      <button id="add_book2"  type="button" disabled > This book is in your wishlist</button>
+      <%
+      }%>
     </body>
     
     </html>

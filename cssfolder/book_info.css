@@ -165,7 +165,25 @@ body {
     color: #421a0edb;
   }
   
+  #add_book2 {
+    height: fit-content;
+    width: fit-content;
 
+    position: absolute; 
+    right: 3%; 
+    bottom: 7%; 
+    
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+
+    background-color:#cbc5bc;
+    color:  #421a0edb;
+
+    font-size: 130%;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
 
 
   *{
