@@ -72,7 +72,7 @@ List<User> users = UserDao.getUsers();
                     for( i = counter - 16 ;i < counter - 8; i++ ){
                         bookPosition += 1;
                     %>
-                        <a href="bookinfo.jsp?id=<%=books.get(i).getBookId() %>"><img src="../images/<%=books.get(i).getBookId() %>.jpg" id="book<%=bookPosition%>"></a>
+                        <a href="bookinfo.jsp?id=<%=books.get(i).getBookId() %>" data-toggle="tooltip" title="Πληροφορίες βιβλίου"><img src="../images/<%=books.get(i).getBookId() %>.jpg" id="book<%=bookPosition%>"></a>
                     <%}
                     if((counter-16) > 0){
                     %>
